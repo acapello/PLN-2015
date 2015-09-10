@@ -2,6 +2,7 @@
 # https://docs.python.org/3/library/collections.html
 from collections import defaultdict
 from math import log
+from random import random
 
 
 class NGram(object):
@@ -90,3 +91,70 @@ class NGram(object):
                 log_prob += log(cond_prob, 2)
 
         return log_prob
+
+
+class NGramGenerator:
+
+    def __init__(self, model):
+        """
+        model -- n-gram model.
+        """
+        self.model = model
+        self.n = n = model.n
+        # n-1 gramas (tuplas): diccionario de (palabra siguiente: probabilidad)
+        self.probs = probs = dict()
+        self.sorted_probs = sorted_probs = dict()
+
+        for t in model.counts:
+            if len(t) == n:
+                ngram = t
+                token = ngram[n - 1]
+                prev_tokens_tuple = ngram[:n - 1]
+                if prev_tokens_tuple not in probs:
+                    probs.update({prev_tokens_tuple: dict()})
+                probs[prev_tokens_tuple].update(
+                    {token: model.cond_prob(token, list(prev_tokens_tuple))}
+                )
+
+        for prev_tokens_tuple, probs_dict in probs.iteritems():
+            sorted_list = sorted(probs_dict.items(),
+                                 key=lambda x: (-x[1], x[0]))
+            sorted_probs.update({prev_tokens_tuple: sorted_list})
+
+    def generate_token(self, prev_tokens=None):
+        """Randomly generate a token, given prev_tokens.
+
+        prev_tokens -- the previous n-1 tokens (optional only if n = 1).
+        """
+        n = self.n
+        if not prev_tokens:
+            prev_tokens = []
+        assert len(prev_tokens) == n - 1
+
+        u = random()
+        next_possible_tokens = self.sorted_probs[tuple(prev_tokens)]
+
+        token = ''
+        c = 0
+        for tk, prob in next_possible_tokens:
+            c += prob
+            if u <= c:
+                token = tk
+                break
+
+        assert token != ''
+
+        return token
+
+    def generate_sent(self):
+        """Randomly generate a sentence."""
+        prev_tokens = ['<s>' for _ in xrange(self.n - 1)]
+        sent = []
+
+        x = self.generate_token(prev_tokens)
+        while x != '</s>':
+            sent.append(x)
+            prev_tokens = (prev_tokens + [x])[1:]
+            x = self.generate_token(prev_tokens)
+
+        return sent
