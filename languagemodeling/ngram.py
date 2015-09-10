@@ -158,3 +158,50 @@ class NGramGenerator:
             x = self.generate_token(prev_tokens)
 
         return sent
+
+
+class AddOneNGram(NGram):
+
+    def __init__(self, n, sents):
+        """
+        n -- order of the model.
+        sents -- list of sentences, each one being a list of tokens.
+        """
+        assert n > 0
+        self.n = n
+        self.counts = counts = defaultdict(int)
+
+        vocabulary = set({'</s>'})
+        for sent in sents:
+            vocabulary.update(set(sent))
+            sent = ['<s>' for _ in xrange(n - 1)] + sent + ['</s>']
+
+            for i in range(len(sent) - n + 1):
+                ngram = tuple(sent[i: i + n])
+                counts[ngram] += 1
+                counts[ngram[:-1]] += 1
+
+        self.v = len(vocabulary)
+
+    def V(self):
+        """Size of the vocabulary.
+        """
+        return self.v
+
+    def cond_prob(self, token, prev_tokens=None):
+        """Conditional probability of a token.
+
+        token -- the token.
+        prev_tokens -- the previous n-1 tokens (optional only if n = 1).
+        """
+        n = self.n
+        if not prev_tokens:
+            prev_tokens = []
+
+        assert len(prev_tokens) == n - 1
+
+        tokens = prev_tokens + [token]
+        num = float(self.counts[tuple(tokens)])
+        denom = self.counts[tuple(prev_tokens)]
+
+        return (num + 1) / (denom + self.v)
