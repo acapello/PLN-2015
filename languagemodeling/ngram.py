@@ -349,3 +349,202 @@ class InterpolatedNGram(SmoothedModel):
         res += op * cond_prob
 
         return res
+
+
+class BackOffNGram(SmoothedModel):
+
+    def __init__(self, n, sents, beta=None, addone=True):
+        """
+        Back-off NGram model with discounting as described by Michael Collins.
+
+        n -- order of the model.
+        sents -- list of sentences, each one being a list of tokens.
+        beta -- discounting hyper-parameter (if not given, estimate using
+            held-out data).
+        addone -- whether to use addone smoothing (default: True).
+        """
+        self.n = n
+        self.beta = beta
+        self.addone = addone
+        # The following attributes are calculated below
+        self.v = None
+        # Always type dict of float (dict()) during execution (alphas, denoms)
+        self.alphas = None
+        self.denoms = None
+        # Always type defaultdict(set)
+        self.Asets = None
+        # Always type defaultdict(int)
+        self.counts = None
+
+        if beta is None:
+            # When beta is not given, we calculate it similarly as the gamma
+            # for the Interpolated model (here  0 < beta < 1).
+            total_sents = len(sents)
+            # 10 percent of the training data (at least one)
+            q = int(total_sents / 10.0) + 1
+            held_out_sents = sents[total_sents - q:total_sents]
+            training_sents = sents[:total_sents - q]
+            possible_betas = [0.1 * i for i in range(2, 10)]
+            self.beta = best_beta = 0.1
+
+            self.counts, self.Asets, vocabulary = \
+                self._get_counts_Asets_and_voc(training_sents)
+            if addone:
+                self.v = len(vocabulary)
+
+            self._calculate_alphas()
+            self._calculate_denoms()
+
+            min_p = self.perplexity(held_out_sents)
+            for b in possible_betas:
+                self.beta = b
+
+                self._calculate_alphas()
+                self._calculate_denoms()
+
+                p = self.perplexity(held_out_sents)
+                print("Beta:", b, "Perplexity:", p)
+                if p < min_p:
+                    min_p = p
+                    best_beta = b
+
+            self.beta = best_beta
+
+        else:
+            self.counts, self.Asets, vocabulary = \
+                self._get_counts_Asets_and_voc(sents)
+            if addone:
+                self.v = len(vocabulary)
+
+            self._calculate_alphas()
+            self._calculate_denoms()
+
+        print("Beta selected", self.beta)
+
+    def _get_counts_Asets_and_voc(self, sents):
+        """ * Counts dict of 0-gram, 1-gram, ..., n-gram of sents
+            * Asets, the dict of (kgram: set(A(kgram)))
+            * The vocabulary of the sents (if required, self.addone)
+        """
+        n = self.n
+        addone = self.addone
+        counts = defaultdict(int)
+        Asets = defaultdict(set)
+        vocabulary = set({END})
+
+        for sent in sents:
+            if addone:
+                vocabulary.update(set(sent))
+
+            sent = [START for _ in range(n - 1)] + sent + [END]
+            sent_len = len(sent)
+            counts[()] += sent_len - n + 1
+
+            for k in range(1, n + 1):
+                for i in range(sent_len - k):
+                    kgram = tuple(sent[i:i + k])
+                    counts[kgram] += 1
+                    Asets[kgram].add(sent[i + k])
+
+                kgram = tuple(sent[sent_len - k:sent_len])
+                counts[kgram] += 1
+
+        return counts, Asets, vocabulary
+
+    def _calculate_alphas(self):
+        """ Procedure for calculating the denoms used in cond_prob
+            The result is saved in self.alphas as a dict of floats
+            ONLY USE it after calculating the counts dict, and Asets
+            Warning: This method changes the state of the object (self.alphas)
+        """
+        self.alphas = dict()
+        for tokens in self.counts.keys():
+            A = self.Asets[tokens]
+            count = float(self.counts[tokens])
+            A_len = len(A)
+            if count != 0 and A_len != 0:
+                self.alphas[tokens] = self.beta * A_len / count
+
+    def _calculate_denoms(self):
+        """ Procedure for calculating the alphas used in cond_prob
+            The result is saved in self.alphas as a dict of floats
+            ONLY USE it after calculating the counts dict, and Asets
+            Warning: This method changes the state of the object (self.denoms),
+            and use the logic of other funcions (self.cond_prob)
+        """
+        self.denoms = dict()
+        for tokens in self.counts.keys():
+            k = len(tokens)
+            A = self.Asets[tokens]
+            for i in range(1, k + 1):
+                s = sum([self.cond_prob(t, tokens[k - i + 1:]) for t in A])
+                self.denoms[tokens[k - i:]] = 1 - s
+
+    def cond_prob(self, token, prev_tokens=None):
+        """ Conditional probability of a token.
+
+            token -- the token.
+            prev_tokens -- the previous n-1 tokens (optional only if n = 1).
+        """
+        if not prev_tokens:
+            prev_tokens = []
+
+        res = 0
+        if len(prev_tokens) == 0:
+            res = self.qML(token, prev_tokens)
+        else:
+            prev_tokens_tuple = tuple(prev_tokens)
+            count = self.counts[prev_tokens_tuple + (token,)]
+
+            if count > 0:
+                res = (count - self.beta) / float(self.counts[prev_tokens_tuple])
+            else:
+                # get alpha, denom and return 1.0 as defect value
+                alpha = self.alphas.get(prev_tokens_tuple, 1.0)
+                denom = self.denoms.get(prev_tokens_tuple, 1.0)
+                num = self.cond_prob(token, prev_tokens[1:])
+                res = alpha * (num / denom)
+
+        return res
+
+    def A(self, tokens):
+        """ Sets of words with counts > 0 and == 0 for a k-gram with 0 < k < n.
+
+            tokens -- the k-gram tuple.
+        """
+        return self.Asets[tuple(tokens)]
+
+    def alpha(self, tokens):
+        """ Missing probability mass for a k-gram with 0 < k < n.
+
+            tokens -- the k-gram tuple.
+        """
+        return self.alphas.get(tuple(tokens), 1.0)
+
+    def denom(self, tokens):
+        """ Normalization factor for a k-gram with 0 < k < n.
+
+            tokens -- the k-gram tuple.
+        """
+        return self.denoms.get(tuple(tokens), 1.0)
+
+
+class Eval(object):
+    def __init__(self, model, test_sents):
+        """ Class for evaluating a model.
+            * log_probability, cross_entropy, perplexity
+            model -- the model to be evaluated
+            test_sents -- sents of the test corpus as a list of lists of tokens
+        """
+        M = 0
+        log_probability = 0
+        for sent in test_sents:
+            M += len(sent)
+            log_probability += model.sent_log_prob(sent)
+
+        cross_entropy = log_probability / float(M)
+        perplexity = pow(2, -cross_entropy)
+
+        self.log_probability = log_probability
+        self.cross_entropy = cross_entropy
+        self.perplexity = perplexity
