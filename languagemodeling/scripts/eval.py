@@ -35,5 +35,6 @@ if __name__ == '__main__':
     cross_ent = evaluator.cross_entropy
     perp = evaluator.perplexity
 
-    print("\n Log-Probability: %f\n Cross-Entropy: %f\n Perplexity: %f\n"
+    print("Input filename: %s" % i)
+    print(" Log-Probability: %f\n Cross-Entropy: %f\n Perplexity: %f\n"
           % (log_prob, cross_ent, perp))

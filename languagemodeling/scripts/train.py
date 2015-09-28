@@ -36,6 +36,7 @@ if __name__ == '__main__':
     n = int(opts['-n'])
     # model type
     m = str(opts['-m'])
+    filename = opts['-o']
 
     # train the model
     if m == "ngram":
@@ -55,8 +56,8 @@ if __name__ == '__main__':
         print(help())
         exit()
 
+    print("n: %d\nOutput file: %s\n" % (n, filename))
     # save it
-    filename = opts['-o']
     f = open(filename, 'wb')
     pickle.dump(model, f)
     f.close()

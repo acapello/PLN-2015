@@ -100,15 +100,7 @@ class NGram(object):
 
             sents -- the sentences as a list of lists of tokens.
         """
-        M = 0
-        log_probability = 0
-        for sent in sents:
-            M += len(sent)
-            log_probability += self.sent_log_prob(sent)
-
-        cross_entropy = log_probability / float(M)
-
-        return pow(2, -cross_entropy)
+        return Eval(self, sents).perplexity
 
 
 class NGramGenerator:
