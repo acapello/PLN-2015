@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     # load the data
     corpus = SimpleAncoraCorpusReader('../../corpus/ancora-2.0/')
-    sents = corpus.tagged_sents()
+    sents = list(corpus.tagged_sents())
 
     # compute the statistics
     words_len = 0
@@ -38,28 +38,29 @@ if __name__ == '__main__':
             wordsby_tag[tag][word] += 1
             tagsby_word[word][tag] += 1
 
-    print('-----Estadísticas básicas:----------------------------------------\
-        ---------')
+    print('-----Estadísticas básicas:------------------------------------------\
+-------')
     print('\tCantidad de oraciones: {}'.format(len(sents)))
     print('\tCantidad de ocurrencias de palabras: {}'.format(words_len))
     print('\tCantidad de palabras (vocabulario): {}'.format(len(tagsby_word)))
     print('\tCantidad de etiquetas (vocabulario de tags): {}\n'
           .format(len(wordsby_tag)))
 
-    print('-----Etiquetas más frecuentes:------------------------------------\
-        ---------')
+    print('-----Etiquetas más frecuentes:--------------------------------------\
+-------')
     for tag, freq in tag_freq.most_common(10):
         # Frequency of the tag in the corpus and percentage of the total
-        print('\tEtiqueta: \'{0}\'  Frecuencia: {1}  Porcentaje del \
-            total: {2:.2f}'.format(tag, freq, 100 * freq / float(words_len)))
+        print('\tEtiqueta: \'{0}\'  Frecuencia: {1}  \
+Porcentaje del total: {2:.2f}'
+              .format(tag, freq, 100 * freq / float(words_len)))
         print('\tPalabras más frecuentes con la etiqueta \'%s\':' % tag)
         five_largest = wordsby_tag[tag].most_common(5)
         for word, freq in five_largest:
             print('\t\t' + word + ' : ' + str(freq))
         print()
 
-    print('\n-----Niveles de ambigüedad de las palabras:---------------------\
-        ---------')
+    print('\n-----Niveles de ambigüedad de las palabras:-----------------------\
+-------')
 
     # Saving ambiguity levels (words seen with one or more tags in the corpus)
     c = defaultdict(lambda: Counter())
@@ -70,7 +71,7 @@ if __name__ == '__main__':
         # Ambiguity level,frequency and percentage of the total
         freq = len(c[ambiguity])
         print('\tAmbigüedad: {0}  Cantidad de palabras: {1}  \
-            Porcentaje del total: {2:.2f}'
+Porcentaje del total: {2:.2f}'
               .format(ambiguity, freq, 100 * freq / float(len(tagsby_word))))
 
         five_largest = c[ambiguity].most_common(5)
