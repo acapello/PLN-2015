@@ -148,3 +148,144 @@ class HMM(object):
         """
         tagger = ViterbiTagger(self)
         return tagger.tag(sent)
+
+
+class MLHMM(HMM):
+
+    def __init__(self, n, tagged_sents, addone=True):
+        """
+        n -- order of the model.
+        tagged_sents -- training sentences, each one being a list of pairs.
+        addone -- whether to use addone smoothing (default: True).
+        """
+
+        self.n = n
+        self.addone = addone
+        # vocabulary. set(strings)
+        self.voc = voc = set()
+        # tagset. set(strings)
+        # dict of tuples (of tags) of len n-1 and n and its counts in corpus
+        self.tags_counts = tags_counts = defaultdict(int)
+        # len of each tag (len 1)
+        self.one_tag_count = one_tag_count = defaultdict(int)
+        # count of paired(word, tag) in the corpus. dict{2_uple: count}
+        self.w_t_counts = w_t_counts = defaultdict(int)
+
+        for t_sent in tagged_sents:
+            # for the ML estimate for self.out and self.trans
+            for word, tag in t_sent:
+                w_t_counts[(word, tag)] += 1
+                one_tag_count[tag] += 1
+                voc.add(word)
+
+            tags = [START] * (n - 1) + [tag for _, tag in t_sent] + [STOP]
+            for i in range(len(tags) - n + 1):
+                ntags = tuple(tags[i:i + n])
+                tags_counts[ntags] += 1
+                tags_counts[ntags[:-1]] += 1
+
+        self.set_of_tags = set(self.one_tag_count.keys())
+
+    def tagset(self):
+        """Returns the set of tags.
+        """
+        return self.set_of_tags
+
+    def tcount(self, tokens):
+        """Count for a k-gram for k <= n.
+
+        tokens -- the k-gram tuple.
+        """
+        return self.tags_counts[tuple(tokens)]
+
+    def unknown(self, w):
+        """Check if a word is unknown for the model.
+
+        w -- the word.
+        """
+        return w not in self.voc
+
+    def trans_prob(self, tag, prev_tags=None):
+        """Probability of a tag.
+        tag -- the tag.
+        prev_tags -- tuple with the previous n-1 tags (optional only if n = 1).
+        """
+        if self.n == 1 and prev_tags is None:
+            prev_tags = []
+        # assert len(prev_tags) == self.n - 1, (len(prev_tags), self.n - 1)
+        assert tag in self.tagset() | {STOP}
+        # assert reduce(mul,
+        #     [prev in self.tagset() | {START} for prev in prev_tags])
+        prev_tags = tuple(prev_tags)
+        num = self.tags_counts[prev_tags + (tag, )]
+        denom = float(self.tags_counts[prev_tags])
+
+        res = 0.0
+        if self.addone:
+            # should be len(self.voc) but changed for better performance
+            res = (num + 1) / (denom + len(self.tagset()))
+        elif denom != 0:
+            res = num / denom
+
+        return res
+
+    def out_prob(self, word, tag):
+        """Probability of a word given a tag.
+        word -- the word.
+        tag -- the tag.
+        """
+        assert tag in self.tagset()
+        res = 0.0
+        if word in self.voc:
+            num = self.w_t_counts[(word, tag)]
+            denom = float(self.one_tag_count[tag])
+            if denom != 0:
+                res = num / denom
+        else:
+            res = 1.0 / len(self.voc)
+
+        return res
+
+
+class ViterbiTagger(object):
+
+    def __init__(self, hmm):
+        """
+        hmm -- the HMM.
+        """
+        self.hmm = hmm
+        self._pi = {}
+
+    def tag(self, sent):
+        """Returns the most probable tagging for a sentence.
+
+        sent -- the sentence.
+        """
+        sent = list(sent)
+        hmm = self.hmm
+        tagset = hmm.tagset()
+        self._pi = pi = {0: {(START,) * (hmm.n - 1): (log2(1.0), [])}}
+
+        for k, w in enumerate(sent):
+            pi[k + 1] = {}
+            tag_out_probs = [(t, hmm.out_prob(w, t)) for t in tagset]
+            for t, out_p in [(t, p) for t, p in tag_out_probs if p > 0.0]:
+                for prev_tags, (log_p, tag_sent) in pi[k].items():
+                    trans_p = hmm.trans_prob(t, prev_tags)
+                    if trans_p > 0.0:
+                        ts = (prev_tags + (t,))[1:]
+                        new_lp = log_p + log2(trans_p) + log2(out_p)
+                        if ts not in pi[k + 1] or new_lp > pi[k + 1][ts][0]:
+                            pi[k + 1][ts] = (new_lp, tag_sent + [t])
+
+        max_lp = M_INF
+        res = None
+        for prev_tags, (log_p, tagging) in pi[len(sent)].items():
+            trans_p = hmm.trans_prob(STOP, prev_tags)
+            if trans_p > 0:
+                new_lp = log_p + log2(trans_p)
+                if new_lp > max_lp:
+                    max_lp = new_lp
+                    res = tagging
+
+        return res
