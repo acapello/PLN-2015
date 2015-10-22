@@ -1,0 +1,90 @@
+(pln-2015):~/pln/PLN-2015/tagging/scripts$ time sh train_all_models.sh
+Loading corpus data...
+Baseline Model selected
+real 25.33
+user 25.00
+sys 0.30
+Loading corpus data...
+Maximum Likelihood Hidden Markov Model selected, n=1
+real 24.59
+user 24.32
+sys 0.24
+Loading corpus data...
+Maximum Likelihood Hidden Markov Model selected, n=2
+real 25.15
+user 24.71
+sys 0.41
+Loading corpus data...
+Maximum Likelihood Hidden Markov Model selected, n=3
+real 25.11
+user 24.82
+sys 0.26
+Loading corpus data...
+Maximum Likelihood Hidden Markov Model selected, n=4
+real 25.26
+user 24.99
+sys 0.24
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=1, c=logreg
+real 520.61
+user 520.13
+sys 0.57
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=2, c=logreg
+real 528.32
+user 527.77
+sys 0.62
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=3, c=logreg
+real 673.46
+user 673.05
+sys 0.56
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=4, c=logreg
+real 846.77
+user 840.12
+sys 6.54
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=1, c=nb
+real 115.66
+user 114.89
+sys 0.76
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=2, c=nb
+real 121.80
+user 120.35
+sys 1.37
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=3, c=nb
+real 155.91
+user 153.74
+sys 2.11
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=4, c=nb
+real 166.13
+user 164.75
+sys 1.08
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=1, c=svc
+real 369.69
+user 364.39
+sys 1.85
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=2, c=svc
+real 377.09
+user 374.41
+sys 2.15
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=3, c=svc
+real 385.03
+user 383.80
+sys 0.81
+Loading corpus data...
+Maximum Entropy Markov Model selected, n=4, c=svc
+real 447.64
+user 446.28
+sys 1.41
+
+real    80m33.689s
+user    80m7.606s
+sys 0m21.398s
