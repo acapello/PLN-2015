@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir models
 time -p python3.4 train.py -m base -o models/base
 time -p python3.4 train.py -m mlhmm -n 1 -o models/mlhmm-1
 time -p python3.4 train.py -m mlhmm -n 2 -o models/mlhmm-2
