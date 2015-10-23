@@ -272,8 +272,8 @@ RESULTADOS:
 Clasificador LogisticRegression
 n = 1
 Accuracy (global):                      92.70%
-Accuracy sobre palabras conocidas:      69.32%
-Accuracy sobre palabras desconocidas:   95.28%
+Accuracy sobre palabras conocidas:      95.28%
+Accuracy sobre palabras desconocidas:   69.32%
 
 real 75.12sec
 user 73.89
@@ -281,8 +281,8 @@ sys   0.30
 
 n = 2
 Accuracy (global):                      92.70%
-Accuracy sobre palabras conocidas:      69.32%
-Accuracy sobre palabras desconocidas:   95.28%
+Accuracy sobre palabras conocidas:      95.28%
+Accuracy sobre palabras desconocidas:   69.32%
 
 real 75.27sec
 user 74.21
@@ -290,8 +290,8 @@ sys   0.22
 
 n = 3
 Accuracy (global):                      91.99%
-Accuracy sobre palabras conocidas:      68.75%
-Accuracy sobre palabras desconocidas:   94.55%
+Accuracy sobre palabras conocidas:      94.55%
+Accuracy sobre palabras desconocidas:   68.75%
 
 real 80.60sec
 user 79.54
@@ -299,8 +299,8 @@ sys   0.24
 
 n = 4
 Accuracy (global):                      92.18%
-Accuracy sobre palabras conocidas:      69.20%
-Accuracy sobre palabras desconocidas:   94.72%
+Accuracy sobre palabras conocidas:      94.72%
+Accuracy sobre palabras desconocidas:   69.20%
 
 real 86.14sec
 user 84.94
@@ -309,8 +309,8 @@ sys   0.26
 Clasificador MultinomialNB
 n = 1
 Accuracy (global):                      82.18%
-Accuracy sobre palabras conocidas:      48.89%
-Accuracy sobre palabras desconocidas:   85.85%
+Accuracy sobre palabras conocidas:      85.85%
+Accuracy sobre palabras desconocidas:   48.89%
 
 real 1439.07sec
 user 1437.63
@@ -318,8 +318,8 @@ sys   0.28
 
 n = 2
 Accuracy (global):                      82.18%
-Accuracy sobre palabras conocidas:      48.89%
-Accuracy sobre palabras desconocidas:   85.85%
+Accuracy sobre palabras conocidas:      85.85%
+Accuracy sobre palabras desconocidas:   48.89%
 
 real 1439.43sec
 user 1437.82
@@ -327,8 +327,8 @@ sys   0.30
 
 n = 3
 Accuracy (global):                      76.46%
-Accuracy sobre palabras conocidas:      40.68%
-Accuracy sobre palabras desconocidas:   80.41%
+Accuracy sobre palabras conocidas:      80.41%
+Accuracy sobre palabras desconocidas:   40.68%
 
 real 1226.13sec
 user 1225.88
@@ -336,8 +336,8 @@ sys   0.42
 
 n = 4
 Accuracy (global):                      71.47%
-Accuracy sobre palabras conocidas:      38.59%
-Accuracy sobre palabras desconocidas:   75.09%
+Accuracy sobre palabras conocidas:      75.09%
+Accuracy sobre palabras desconocidas:   38.59%
 
 real 1154.15sec
 user 1153.83
@@ -347,8 +347,8 @@ sys   0.55
 Clasificador LinearSVC
 n = 1
 Accuracy (global):                      94.43%
-Accuracy sobre palabras conocidas:      70.82%
-Accuracy sobre palabras desconocidas:   97.04%
+Accuracy sobre palabras conocidas:      97.04%
+Accuracy sobre palabras desconocidas:   70.82%
 
 real 68.21sec
 user 67.82
@@ -356,8 +356,8 @@ sys   0.12
 
 n = 2
 Accuracy (global):                      94.43%
-Accuracy sobre palabras conocidas:      70.82%
-Accuracy sobre palabras desconocidas:   97.04%
+Accuracy sobre palabras conocidas:      97.04%
+Accuracy sobre palabras desconocidas:   70.82%
 
 real 73.25sec
 user 72.72
@@ -365,8 +365,8 @@ sys   0.24
 
 n = 3
 Accuracy (global):                      94.29%
-Accuracy sobre palabras conocidas:      70.57%
-Accuracy sobre palabras desconocidas:   96.91%
+Accuracy sobre palabras conocidas:      96.91%
+Accuracy sobre palabras desconocidas:   70.57%
 
 real 81.06sec
 user 80.52
@@ -374,8 +374,8 @@ sys   0.25
 
 n = 4
 Accuracy (global):                      94.40%
-Accuracy sobre palabras conocidas:      71.38%
-Accuracy sobre palabras desconocidas:   96.94%
+Accuracy sobre palabras conocidas:      96.94%
+Accuracy sobre palabras desconocidas:   71.38%
 
 real 85.23sec
 user 84.73

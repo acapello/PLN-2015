@@ -56,7 +56,7 @@ class MEMM:
 
         w -- the word.
         """
-        return w in self.voc
+        return w not in self.voc
 
     def sents_histories(self, tagged_sents):
         """
