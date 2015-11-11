@@ -24,7 +24,7 @@ from parsing.util import spans
 def progress(msg, width=None):
     """Ouput the progress of something on the same line."""
     if not width:
-        width = len(msg)
+        width = len(msg) + 1
     print('\b' * width + msg, end='')
     sys.stdout.flush()
 
@@ -32,12 +32,13 @@ def progress(msg, width=None):
 if __name__ == '__main__':
     opts = docopt(__doc__)
 
-    print('Loading model...')
+    print('\nLoading model...')
 
     filename = opts['-i']
     f = open(filename, 'rb')
     model = pickle.load(f)
     f.close()
+    print("Model type: %s" % type(model))
 
     print('Loading corpus...')
 
@@ -60,7 +61,8 @@ if __name__ == '__main__':
 
     format_str = '{:3.1f}% ({}/{}) | Labeled: (P={:2.2f}%, R={:2.2f}%, \
 F1={:2.2f}%) | Unlabeled: (P={:2.2f}%, R={:2.2f}%, F1={:2.2f}%)'
-    progress(format_str.format(0.0, 0, n, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0))
+    # Uncomment next line if you want to see the progress
+    # progress(format_str.format(0.0, 0, n, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0))
 
     for i, gold_parsed_sent in enumerate(parsed_sents):
         tagged_sent = gold_parsed_sent.pos()
@@ -82,8 +84,8 @@ F1={:2.2f}%) | Unlabeled: (P={:2.2f}%, R={:2.2f}%, F1={:2.2f}%)'
             f1_l = 2 * prec_l * rec_l / (prec_l + rec_l)
 
         # compute labeled scores
-        gold_spans_u = {(i, j) for (n, i, j) in gold_spans_l}
-        model_spans_u = {(i, j) for (n, i, j) in model_spans_l}
+        gold_spans_u = {(j, k) for (n, j, k) in gold_spans_l}
+        model_spans_u = {(j, k) for (n, j, k) in model_spans_l}
         hits_u += len(gold_spans_u & model_spans_u)
         total_gold_u += len(gold_spans_u)
         total_model_u += len(model_spans_u)
@@ -94,8 +96,9 @@ F1={:2.2f}%) | Unlabeled: (P={:2.2f}%, R={:2.2f}%, F1={:2.2f}%)'
         if (prec_l + rec_l) > 0:
             f1_u = 2 * prec_u * rec_u / (prec_u + rec_u)
 
-        progress(format_str.format(float(i+1) * 100 / n, i+1, n,
-                 prec_l, rec_l, f1_l,  prec_u, rec_u, f1_u))
+        # Uncomment next lines if you want to see the progress
+        # progress(format_str.format(float(i+1) * 100 / n, i+1, n,
+        #          prec_l, rec_l, f1_l,  prec_u, rec_u, f1_u))
 
     print('')
     print('Parsed {} sentences'.format(n))
@@ -107,3 +110,4 @@ F1={:2.2f}%) | Unlabeled: (P={:2.2f}%, R={:2.2f}%, F1={:2.2f}%)'
     print('  Precision: {:2.2f}% '.format(prec_u))
     print('  Recall: {:2.2f}% '.format(rec_u))
     print('  F1: {:2.2f}% '.format(f1_u))
+    print('')
