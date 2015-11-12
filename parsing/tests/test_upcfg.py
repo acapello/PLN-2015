@@ -1,4 +1,7 @@
 # https://docs.python.org/3/library/unittest.html
+import sys
+sys.path.append('../../')
+
 from unittest import TestCase
 
 from nltk.tree import Tree
@@ -19,7 +22,7 @@ class TestUPCFG(TestCase):
             """)
         t2 = t.copy(deep=True)
 
-        model = UPCFG([t])
+        model = UPCFG([t], start='S')
 
         self.assertEqual(t, t2)
 
@@ -32,7 +35,7 @@ class TestUPCFG(TestCase):
                 )
             """)
 
-        model = UPCFG([t])
+        model = UPCFG([t], start='S')
 
         prods = model.productions()
 

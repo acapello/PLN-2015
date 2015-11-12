@@ -1,4 +1,7 @@
 # https://docs.python.org/3/library/unittest.html
+import sys
+sys.path.append('../../')
+
 from unittest import TestCase
 from math import log2
 
@@ -98,6 +101,7 @@ class TestCKYParser(TestCase):
         # check log probability
         lp2 = log2(1.0 * 0.6 * 1.0 * 0.9 * 1.0 * 1.0 * 0.4 * 0.1 * 1.0)
         self.assertAlmostEqual(lp, lp2)
+
 
     def assertEqualPi(self, pi1, pi2):
         self.assertEqual(set(pi1.keys()), set(pi2.keys()))

@@ -1,4 +1,7 @@
 # https://docs.python.org/3/library/unittest.html
+import sys
+sys.path.append('../../')
+
 from unittest import TestCase
 
 from nltk.tree import Tree
