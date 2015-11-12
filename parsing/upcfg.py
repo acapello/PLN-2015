@@ -32,7 +32,6 @@ class UPCFG:
         self._probabilistic_productions = self.pcfg.productions()
         self._parser = CKYParser(self.pcfg)
 
-
     def productions(self):
         """Returns the list of UPCFG probabilistic productions.
         """
@@ -51,7 +50,7 @@ class UPCFG:
         if unlex_parse_tree is None:
             # Flat tree
             parse_tree = Tree(self.start.symbol(),
-                    [Tree(tag, [word]) for word, tag in tagged_sent])
+                              [Tree(tag, [word]) for word, tag in tagged_sent])
         else:
             # Undo CNF
             unlex_parse_tree.un_chomsky_normal_form()

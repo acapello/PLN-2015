@@ -2,6 +2,7 @@ from nltk.tree import Tree
 from nltk.grammar import Nonterminal as N
 from collections import defaultdict
 
+
 class CKYParser:
 
     def __init__(self, grammar):
@@ -28,9 +29,6 @@ class CKYParser:
             else:
                 rhs = tuple(map(N.symbol, p.rhs()))
                 ps_unlex[rhs][lhs] = p.logprob()
-
-
-
 
     def parse(self, sent):
         """Parse a sequence of terminals.
