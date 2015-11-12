@@ -27,6 +27,9 @@ parsing/scripts$ sh eval_all_models.sh
 Hint: Comentar/descomentar la linea de "progress" de eval.py si se quiere
 guardar la salida en un archivo/ver en terminal el progreso.
 
+Entrenar y evaluar todo:
+parsing/scripts$ sh train_all_models.sh && sh eval_all_models.sh
+
 Por defecto el standard output se guarda en archivos models/train_output.txt,
 models/eval_output.txt junto a los modelos entrenados
 
