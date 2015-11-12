@@ -49,7 +49,7 @@ tagging/scripts$ python3.4 eval.py -i <file>
 
 Resultados de los modelos “baseline” para oraciones de largo menor o igual a 20
 -------------------------------------------------------------------------------
-Archivo: baseline.py
+Archivo: baselines.py
 
 - Flat:
 
@@ -109,6 +109,8 @@ sys 0.18
 
 EJERCICIO 2: Algoritmo CKY
 -----------------------------
+Archivo: cky_parser.py
+
 Se implementó el algoritmo CKY que, dada una UPCFG binarizada, encuentra el
 "mejor" árbol sintáctico (el más adecuado dado el modelo) junto a su
 log-probabilidad.
