@@ -1,7 +1,4 @@
 # https://docs.python.org/3/library/unittest.html
-import sys
-sys.path.append('../../')
-
 from unittest import TestCase
 
 from nltk.tree import Tree
@@ -22,6 +19,7 @@ class TestUPCFG(TestCase):
             """)
         t2 = t.copy(deep=True)
 
+        # Bugfix from official test (, start='S')
         model = UPCFG([t], start='S')
 
         self.assertEqual(t, t2)
@@ -35,6 +33,7 @@ class TestUPCFG(TestCase):
                 )
             """)
 
+        # Bugfix from official test (, start='S')
         model = UPCFG([t], start='S')
 
         prods = model.productions()
@@ -86,3 +85,63 @@ class TestUPCFG(TestCase):
 
         tree2 = Tree.fromstring("(S (Noun gato) (Det el) (Verb come) (Noun pescado) (Adj crudo))")
         self.assertEqual(tree, tree2)
+
+    def test_horz_markov_None(self):
+        t = Tree.fromstring("(NP (Det el) (Noun gato) (Adj negro))")
+
+        # Bugfix from official test (, start='NP')
+        model = UPCFG([t], start='NP')  # horzMarkov=None by default
+
+        prods = model.productions()
+
+        prods2 = [
+            # the right-binarized productions:
+            ProbabilisticProduction(N('NP'), [N('Det'), N('NP|<Noun-Adj>')], prob=1.0),
+            ProbabilisticProduction(N('NP|<Noun-Adj>'), [N('Noun'), N('Adj')], prob=1.0),
+
+            ProbabilisticProduction(N('Det'), ['Det'], prob=1.0),
+            ProbabilisticProduction(N('Noun'), ['Noun'], prob=1.0),
+            ProbabilisticProduction(N('Adj'), ['Adj'], prob=1.0),
+        ]
+
+        self.assertEqual(set(prods), set(prods2))
+
+    def test_horz_markov_1(self):
+        t = Tree.fromstring("(NP (Det el) (Noun gato) (Adj negro))")
+
+        # Bugfix from official test (, start='NP')
+        model = UPCFG([t], start='NP', horzMarkov=1)
+
+        prods = model.productions()
+
+        prods2 = [
+            # the right-binarized productions:
+            ProbabilisticProduction(N('NP'), [N('Det'), N('NP|<Noun>')], prob=1.0),
+            ProbabilisticProduction(N('NP|<Noun>'), [N('Noun'), N('Adj')], prob=1.0),
+
+            ProbabilisticProduction(N('Det'), ['Det'], prob=1.0),
+            ProbabilisticProduction(N('Noun'), ['Noun'], prob=1.0),
+            ProbabilisticProduction(N('Adj'), ['Adj'], prob=1.0),
+        ]
+
+        self.assertEqual(set(prods), set(prods2))
+
+    def test_horz_markov_0(self):
+        t = Tree.fromstring("(NP (Det el) (Noun gato) (Adj negro))")
+
+        # Bugfix from official test (, start='NP')
+        model = UPCFG([t], start='NP', horzMarkov=0)
+
+        prods = model.productions()
+
+        prods2 = [
+            # the right-binarized productions:
+            ProbabilisticProduction(N('NP'), [N('Det'), N('NP|<>')], prob=1.0),
+            ProbabilisticProduction(N('NP|<>'), [N('Noun'), N('Adj')], prob=1.0),
+
+            ProbabilisticProduction(N('Det'), ['Det'], prob=1.0),
+            ProbabilisticProduction(N('Noun'), ['Noun'], prob=1.0),
+            ProbabilisticProduction(N('Adj'), ['Adj'], prob=1.0),
+        ]
+
+        self.assertEqual(set(prods), set(prods2))
