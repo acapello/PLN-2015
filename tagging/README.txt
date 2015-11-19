@@ -1,3 +1,8 @@
+PROCESAMIENTO DE LENGUAJE NATURAL 2015 - FaMAF, UNC
+====================================================
+TRABAJO PRÁCTICO 2
+====================================================
+
 AUTOR:
 CAPELLO, AGUSTÍN ALDO
 capelloagustin@gmail.com
@@ -5,6 +10,14 @@ GitHub: acapello
 
 Página del enunciado del proyecto:
 http://cs.famaf.unc.edu.ar/wiki/materias/pln/practico2
+
+Nota: Para ejecutar este proyecto (y los demás) es necesario haber instalado
+todos los requerimientos descriptos en PLN-2015/README.rst y correr TODOS
+los comandos desde la carpeta raíz (PLN-2015/), estando en el virtualenv.
+Esto se logra, luego de haber configurado apropiadamente:
+$ workon pln-2015
+Y el prompt debería quedar parecido a lo siguiente:
+(pln-2015):~[some-folders...]/PLN-2015$
 
 
 ENTRENAR TODOS LOS MODELOS:
@@ -14,12 +27,12 @@ PLN-2015/corpus/ancora-2.0, de lo contrario deben modificarse los scripts
 train.py y eval.py en las lineas 42 y 50 respectivamente para cargar el corpus
 correctamente.
 
-tagging/scripts$ sh train_all_models.sh > train_output.txt
+PLN-2015$ sh tagging/scripts/train_all_models.sh > train_output.txt
 Tiempo estimado de ejecución: 50min a 1h 20min
 
 EVALUAR TODOS LOS MODELOS:
 
-tagging/scripts$ sh eval_all_models.sh > eval_output.txt
+PLN-2015$ sh tagging/scripts/eval_all_models.sh > eval_output.txt
 Tiempo estimado de ejecución: 2hs a 2hs 30min
 
 Hint: Comentar/descomentar la linea de "progress" de eval.py si se quiere
@@ -32,7 +45,7 @@ Se utiliza la clase Counter() de la librería collections por el uso del método
 most_common(n) que devuelve los n mas frecuentes.
 
 Ejecución:
-tagging/scripts$ python3.4 stats.py
+PLN-2015$ python tagging/scripts/stats.py
 
 -----Estadísticas básicas:-------------------------------------------------
     Cantidad de oraciones: 17379
@@ -173,12 +186,12 @@ tagging/scripts$ python3.4 stats.py
 EJERCICIO 3: Entrenamiento y Evaluación de Taggers
 
 Entrenar un modelo:
-tagging/scripts$ python3.4 train.py [-n <n>] [-m <model>] -o <file>
+PLN-2015$ python tagging/scripts/train.py [-n <n>] [-m <model>] -o <file>
 <n> ::= [1 | 2 | 3 | 4]   (no es utilizado en baseline)
 <model> ::= [base | mlhmm | memm]
 
 Evaluar un modelo:
-tagging/scripts$ python3.4 eval.py -i <file>
+PLN-2015$ python tagging/scripts/eval.py -i <file>
 
 Para calular la matriz de confusión se hace uso de la función que provee la
 librería de scikit learn. También se hace uso de matplotlib.pyplot para
@@ -204,8 +217,8 @@ sys   0.20
 Matriz de confusión en base-confusion-matrix.png, .txt
 
 Entrenar y evaluar el modelo:
-tagging/scripts$ python3.4 train.py -m base -o base
-tagging/scripts$ python3.4 eval.py -i base
+PLN-2015$ python tagging/scripts/train.py -m base -o base
+PLN-2015$ python tagging/scripts/eval.py -i base
 Se deberán imprimir los resultados de accuracy mostrados arriba, y la matriz de
 confusión (se recomienda consola full screen)
 (análogo para los siguientes modelos)
