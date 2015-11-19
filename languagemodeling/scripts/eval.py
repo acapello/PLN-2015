@@ -9,9 +9,8 @@ Options:
   -i <file>     Language model file.
   -h --help     Show this screen.
 """
-
-import sys
-sys.path.append("../../")
+#  You must be in the virtualenv ($ workon pln-2015) to run this script
+# Attention: you must run this (every) script from PLN-2015/ directory
 
 import pickle
 from docopt import docopt
@@ -27,7 +26,7 @@ if __name__ == '__main__':
     f = open(i, 'rb')
     model = pickle.load(f)
 
-    test_corpus = PlaintextCorpusReader('../corpora/', 'test.txt')
+    test_corpus = PlaintextCorpusReader('corpus/spanish', 'test.txt')
     test_sents = test_corpus.sents()
 
     evaluator = Eval(model, test_sents)
