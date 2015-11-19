@@ -7,8 +7,8 @@ Usage:
 Options:
   -h --help     Show this screen.
 """
-import sys
-sys.path.append("../../")
+# import sys
+# sys.path.append("../../")
 
 from docopt import docopt
 from collections import defaultdict, Counter
@@ -20,7 +20,7 @@ if __name__ == '__main__':
     opts = docopt(__doc__)
 
     # load the data
-    corpus = SimpleAncoraCorpusReader('../../corpus/ancora-2.0/')
+    corpus = SimpleAncoraCorpusReader('corpus/ancora-2.0/')
     sents = list(corpus.tagged_sents())
 
     # compute the statistics

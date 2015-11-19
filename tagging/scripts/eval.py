@@ -8,8 +8,8 @@ Options:
   -i <file>     Tagging model file.
   -h --help     Show this screen.
 """
-import sys
-sys.path.append("../../")
+# import sys
+# sys.path.append("../../")
 
 # Warning: ignoring warnings
 import warnings
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     # load the data
     print("Loading corpus data...")
     files = '3LB-CAST/.*\.tbf\.xml'
-    corpus = SimpleAncoraCorpusReader('../../corpus/ancora-2.0/', files)
+    corpus = SimpleAncoraCorpusReader('corpus/ancora-2.0/', files)
     sents = list(corpus.tagged_sents())
 
     # compute statistics
