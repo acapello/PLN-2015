@@ -1,4 +1,3 @@
-# coding: latin1
 # https://docs.python.org/3/library/unittest.html
 from unittest import TestCase
 

@@ -1,4 +1,3 @@
-# coding: latin1
 # https://docs.python.org/3/library/unittest.html
 from unittest import TestCase
 
@@ -58,7 +57,6 @@ class TestBackoffNGram(TestCase):
             ('salmón',): 1.0 - model.cond_prob('.'),
         }
         for tokens, d in denom.items():
-            print tokens, d, "vs", model.denom(tokens)
             self.assertAlmostEqual(model.denom(tokens), d, msg=tokens)
 
     def test_count_1gram(self):
@@ -120,7 +118,6 @@ class TestBackoffNGram(TestCase):
         }
         for model in models:
             for gram, c in counts.items():
-                # print gram, c, "vs calc", model.count(gram)
                 self.assertEqual(model.count(gram), c)
 
     def test_cond_prob_1gram_no_addone(self):
@@ -217,27 +214,23 @@ class TestBackoffNGram(TestCase):
 
     def test_norm_3gram(self):
         models = [
-            # BackOffNGram(3, self.sents, beta=0.0, addone=False),
-            # BackOffNGram(3, self.sents, beta=0.5, addone=False),
-            # BackOffNGram(3, self.sents, beta=0.0, addone=True),
+            BackOffNGram(3, self.sents, beta=0.0, addone=False),
+            BackOffNGram(3, self.sents, beta=0.5, addone=False),
+            BackOffNGram(3, self.sents, beta=0.0, addone=True),
             BackOffNGram(3, self.sents, beta=0.5, addone=True),
         ]
 
         tokens = {'el', 'gato', 'come', 'pescado', '.', 'la', 'gata', 'salmón', '</s>'}
         prev_tokens = {'el', 'gato', 'come', 'pescado', '.', 'la', 'gata', 'salmón', '<s>'}
-        # prevs = [['<s>', '<s>']] + \
-        #     [['<s>', t] for t in prev_tokens] + \
-        #     [[t1, t2] for t1 in prev_tokens for t2 in prev_tokens]
-        prevs = [['<s>', 'el']]
+        prevs = [['<s>', '<s>']] + \
+            [['<s>', t] for t in prev_tokens] + \
+            [[t1, t2] for t1 in prev_tokens for t2 in prev_tokens]
 
         for model in models:
             for prev in prevs:
                 prob_sum = sum(model.cond_prob(token, prev) for token in tokens)
-                #print prob_sum, prev
-                for token in tokens:
-                    print(token, model.cond_prob(token, prev))
                 # prob_sum < 1.0 or almost equal to 1.0:
-                self.assertAlmostLessEqual(prob_sum, 1.0, msg=(prob_sum, prev))
+                self.assertAlmostLessEqual(prob_sum, 1.0, msg=prev)
 
     def test_held_out(self):
         model = BackOffNGram(1, self.sents)
