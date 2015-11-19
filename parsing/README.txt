@@ -1,8 +1,7 @@
 PROCESAMIENTO DE LENGUAJE NATURAL 2015 - FaMAF, UNC
 ====================================================
-PRÁCTICO 3
+TRABAJO PRÁCTICO 3
 ====================================================
-
 
 AUTOR:
 CAPELLO, AGUSTÍN ALDO
@@ -12,6 +11,14 @@ GitHub: acapello
 Página del enunciado del proyecto:
 http://cs.famaf.unc.edu.ar/wiki/materias/pln/practico3
 
+Nota: Para ejecutar este proyecto (y los demás) es necesario haber instalado
+todos los requerimientos descriptos en PLN-2015/README.rst y correr TODOS
+los comandos desde la carpeta raíz (PLN-2015/), estando en el virtualenv.
+Esto se logra, luego de haber configurado apropiadamente:
+$ workon pln-2015
+Y el prompt debería quedar parecido a lo siguiente:
+(pln-2015):~[some-folders...]/PLN-2015$
+
 
 ENTRENAR TODOS LOS MODELOS:
 Se provee un script para entrenar modelos Baseline, UPCFG.
@@ -19,16 +26,16 @@ Es necesario ubicar el corpus en el directorio adecuado, es decir, en
 PLN-2015/corpus/ancora-2.0, de lo contrario deben modificarse los scripts
 train.py y eval.py para cargar el corpus correctamente.
 
-parsing/scripts$ sh train_all_models.sh
+PLN-2015$ sh train_all_models.sh
 
 EVALUAR TODOS LOS MODELOS:
-parsing/scripts$ sh eval_all_models.sh
+PLN-2015$ sh eval_all_models.sh
 
 Hint: Comentar/descomentar la linea de "progress" de eval.py si se quiere
 guardar la salida en un archivo/ver en terminal el progreso.
 
 Entrenar y evaluar todo:
-parsing/scripts$ sh train_all_models.sh && sh eval_all_models.sh
+PLN-2015$ sh train_all_models.sh && sh eval_all_models.sh
 
 Por defecto el standard output se guarda en archivos models/train_output.txt,
 models/eval_output.txt junto a los modelos entrenados
@@ -39,12 +46,12 @@ EJERCICIO 1: Evaluación de Parsers
 Archivos: scripts/eval.py scripts/train.py
 
 Entrenar un modelo:
-parsing/scripts$ python3.4 train.py [-n <n>] [-m <model>] -o <file>
+PLN-2015$ python parsing/scripts/train.py [-n <n>] [-m <model>] -o <file>
 <n> ::= [0 | 1 | 2 | 3 | ...]   (orden de markovización horizontal para upcfg)
 <model> ::= [flat | rbranch | lbranch | upcfg]
 
 Evaluar un modelo:
-tagging/scripts$ python3.4 eval.py -i <file>
+tagging/scripts$ python parsing/scripts/eval.py -i <file>
 
 
 Resultados de los modelos “baseline” para oraciones de largo menor o igual a 20

@@ -12,8 +12,8 @@ Options:
   Note: m and n can be used together to satisfy both conditions at the same\
  time
 """
-import sys
-sys.path.append('../../')
+# import sys
+# sys.path.append('../../')
 from docopt import docopt
 import pickle
 import sys
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     print('Loading corpus...')
 
     files = '3LB-CAST/.*\.tbf\.xml'
-    corpus = SimpleAncoraCorpusReader('../../corpus/ancora-2.0/', files)
+    corpus = SimpleAncoraCorpusReader('corpus/ancora-2.0/', files)
     parsed_sents = list(corpus.parsed_sents())
 
     om, on = opts['-m'], opts['-n']

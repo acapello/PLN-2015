@@ -14,9 +14,16 @@ Options:
   -o <file>     Output model file.
   -h --help     Show this screen.
 """
-import sys
-sys.path.append('../')
-sys.path.append('../../')
+#  You must be in the virtualenv ($ workon pln-2015) to run this script
+# Attention: you must run this (every) script from PLN-2015/ directory
+
+# For running this script from any path
+# import os, sys
+# script_dir = os.path.realpath(os.path.split(sys.argv[0])[0])
+# # put corpus_dir in SimpleAncoraCorpusReader function
+# corpus_dir = os.path.join(script_dir, '../../corpus/spanish/')
+# # PLN-2015 directory (for importing packages)
+# sys.path.append(os.path.join(script_dir, '../../'))
 
 from docopt import docopt
 import pickle
@@ -40,7 +47,7 @@ if __name__ == '__main__':
 
     print('\nLoading corpus...')
     files = 'CESS-CAST-(A|AA|P)/.*\.tbf\.xml'
-    corpus = SimpleAncoraCorpusReader('../../corpus/ancora-2.0/', files)
+    corpus = SimpleAncoraCorpusReader('corpus/ancora-2.0/', files)
 
     print('Training model...')
     om, on = opts['-m'], opts['-n']
