@@ -384,15 +384,15 @@ class BackOffNGram(SmoothedModel):
             if addone:
                 self.v = len(vocabulary)
 
-            self._calculate_alphas()
-            self._calculate_denoms()
+            self._compute_alphas()
+            self._compute_denoms()
 
             min_p = self.perplexity(held_out_sents)
             for b in possible_betas:
                 self.beta = b
 
-                self._calculate_alphas()
-                self._calculate_denoms()
+                self._compute_alphas()
+                self._compute_denoms()
 
                 p = self.perplexity(held_out_sents)
                 print("Beta:", b, "Perplexity:", p)
@@ -408,8 +408,8 @@ class BackOffNGram(SmoothedModel):
             if addone:
                 self.v = len(vocabulary)
 
-            self._calculate_alphas()
-            self._calculate_denoms()
+            self._compute_alphas()
+            self._compute_denoms()
 
         print("Beta selected", self.beta)
 
@@ -443,34 +443,45 @@ class BackOffNGram(SmoothedModel):
 
         return counts, Asets, vocabulary
 
-    def _calculate_alphas(self):
-        """ Procedure for calculating the denoms used in cond_prob
+    def _compute_alphas(self):
+        """ Procedure for computing the alphas used in cond_prob
             The result is saved in self.alphas as a dict of floats
-            ONLY USE it after calculating the counts dict, and Asets
+            ONLY USE it after computing the counts dict, and Asets
             Warning: This method changes the state of the object (self.alphas)
         """
         self.alphas = dict()
         for tokens in self.counts.keys():
             A = self.Asets[tokens]
             count = float(self.counts[tokens])
-            A_len = len(A)
-            if count != 0 and A_len != 0:
-                self.alphas[tokens] = self.beta * A_len / count
+            if count != 0 and len(A) != 0:
+                self.alphas[tokens] = self.beta * len(A) / count
 
-    def _calculate_denoms(self):
-        """ Procedure for calculating the alphas used in cond_prob
-            The result is saved in self.alphas as a dict of floats
-            ONLY USE it after calculating the counts dict, and Asets
+    def _compute_denoms(self):
+        """ Procedure for computing the denoms used in cond_prob
+            The result is saved in self.denoms as a dict of floats
+            ONLY USE it after computing the counts dict, and Asets
             Warning: This method changes the state of the object (self.denoms),
             and use the logic of other funcions (self.cond_prob)
         """
         self.denoms = dict()
         for tokens in self.counts.keys():
-            k = len(tokens)
+            # In gral,
+            # denom(t) = 1 - sum for x in A(tokens) of c*(t[1:]+x) / c(t[1:])
+            # case len(t) == 1 isolated because the
             A = self.Asets[tokens]
-            for i in range(1, k + 1):
-                s = sum([self.cond_prob(t, tokens[k - i + 1:]) for t in A])
-                self.denoms[tokens[k - i:]] = 1 - s
+            s_count = sum([self.counts[tokens[1:] + (t,)] for t in A])
+            denom = self.counts[tokens[1:]]
+            if len(tokens) == 1:
+                # unigrams. not discount and apply addone properly
+                # + len(A) for the effect of the sum of s_count (is 1*len(A))
+                num = s_count + len(A) if self.addone else s_count
+                denom = denom + self.v if self.addone else denom
+            else:
+                # discount
+                num = s_count - self.beta * len(A)
+
+            if denom != 0:
+                self.denoms[tokens] = 1 - num / float(denom)
 
     def cond_prob(self, token, prev_tokens=None):
         """ Conditional probability of a token.
@@ -495,7 +506,8 @@ class BackOffNGram(SmoothedModel):
                 alpha = self.alphas.get(prev_tokens_tuple, 1.0)
                 denom = self.denoms.get(prev_tokens_tuple, 1.0)
                 num = self.cond_prob(token, prev_tokens[1:])
-                res = alpha * (num / denom)
+                if denom != 0:
+                    res = alpha * (num / denom)
 
         return res
 
