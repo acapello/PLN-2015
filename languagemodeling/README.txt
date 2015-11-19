@@ -1,3 +1,9 @@
+PROCESAMIENTO DE LENGUAJE NATURAL 2015 - FaMAF, UNC
+====================================================
+TRABAJO PRÁCTICO 1
+====================================================
+
+
 AUTOR:
 CAPELLO, AGUSTÍN ALDO
 capelloagustin@gmail.com
@@ -5,10 +11,14 @@ GitHub: acapello
 
 Página del enunciado del proyecto:
 http://cs.famaf.unc.edu.ar/wiki/materias/pln/practico1
-En la misma se encuentran requisitos para ejecutar el proyecto, por ejemplo
-Python >= 3
 
-
+Nota: Para ejecutar este proyecto (y los demás) es necesario haber instalado
+todos los requerimientos descriptos en PLN-2015/README.rst y correr TODOS
+los comandos desde la carpeta raíz (PLN-2015/), estando en el virtualenv.
+Esto se logra, luego de haber configurado apropiadamente:
+$ workon pln-2015
+Y el prompt debería quedar parecido a lo siguiente:
+(pln-2015):~[some-folders...]/PLN-2015$
 
 EJERCICIO 1: Corpus
 
@@ -123,12 +133,14 @@ Utilizando el script eval.py
 
 Orden           |        1         |       2         |        3         |     4
 
-Add-One         |   1303.291309    |   3612.759288   |   27939.970358   | 50073.855
+NGram           |        inf       |      inf        |       inf        |     inf
+
+Add-One         |   1303.291309    |   3612.759288   |   27939.970358   |  50073.855
 
 Interpolated    |   1301.364075    |   319.840250    |   380.100998     |  605.988625
                     (Gamma:1.0)        (Gamma:250.0)    (Gamma:250.0)     (Gamma:75.0)
 
-BackOff         |   1301.364075    |   275.579150    |   262.203081     |  266.749539
+BackOff         |   1301.364075    |   261.497105    |   230.284771     |  227.868515
                     (Beta:0.1)        (Beta:0.7)        (Beta:0.8)         (Beta:0.8)
 
 
@@ -138,10 +150,10 @@ ENTRENAR TODOS LOS MODELOS:
 Se provee un script para entrenar todos los modelos, hasta cuatrigramas.
 
 
-sh train_all_models.sh > train_output
+PLN-2015$ sh languagemodeling/scripts/train_all_models.sh
 
 
-Aproximadamente el tiempo de ejecución del script es de 20 minutos con un procesador
+Aproximadamente el tiempo de ejecución del script es de 10 minutos con un procesador
 Intel i5- i7
 En output se podrán apreciar impresiones del programa, como por ejemplo
 la sucesiva selección de gammas y betas.
@@ -149,4 +161,6 @@ la sucesiva selección de gammas y betas.
 
 EVALUAR TODOS LOS MODELOS:
 
-sh eval_all_models.sh > eval_output
+PLN-2015$ sh languagemodeling/scripts/eval_all_models.sh
+
+Tiempo de demora aproximado: 2 minutos
