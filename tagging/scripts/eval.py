@@ -8,7 +8,7 @@ Options:
   -i <file>     Tagging model file.
   -h --help     Show this screen.
 """
-# import sys
+import sys
 # sys.path.append("../../")
 
 # Warning: ignoring warnings
