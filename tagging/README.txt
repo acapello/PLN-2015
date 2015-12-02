@@ -55,6 +55,7 @@ PLN-2015$ python tagging/scripts/stats.py
 
 -----Etiquetas más frecuentes:---------------------------------------------
     Etiqueta: 'nc'  Frecuencia: 92002  Porcentaje del total: 17.79
+    Significado: Nombre común
     Palabras más frecuentes con la etiqueta 'nc':
         años : 849
         presidente : 682
@@ -63,6 +64,7 @@ PLN-2015$ python tagging/scripts/stats.py
         partido : 438
 
     Etiqueta: 'sp'  Frecuencia: 79904  Porcentaje del total: 15.45
+    Significado: Preposición
     Palabras más frecuentes con la etiqueta 'sp':
         de : 28475
         en : 12114
@@ -71,6 +73,7 @@ PLN-2015$ python tagging/scripts/stats.py
         con : 4150
 
     Etiqueta: 'da'  Frecuencia: 54552  Porcentaje del total: 10.55
+    Significado: Determinante Artículo
     Palabras más frecuentes con la etiqueta 'da':
         la : 17897
         el : 14524
@@ -79,6 +82,7 @@ PLN-2015$ python tagging/scripts/stats.py
         El : 2817
 
     Etiqueta: 'vm'  Frecuencia: 50609  Porcentaje del total: 9.78
+    Significado: Verbo Principal
     Palabras más frecuentes con la etiqueta 'vm':
         está : 564
         tiene : 511
@@ -87,6 +91,7 @@ PLN-2015$ python tagging/scripts/stats.py
         hace : 350
 
     Etiqueta: 'aq'  Frecuencia: 33904  Porcentaje del total: 6.55
+    Significado: Adjetivo Calificativo
     Palabras más frecuentes con la etiqueta 'aq':
         pasado : 393
         gran : 275
@@ -95,10 +100,12 @@ PLN-2015$ python tagging/scripts/stats.py
         próximo : 213
 
     Etiqueta: 'fc'  Frecuencia: 30148  Porcentaje del total: 5.83
+    Significado: Símbolo ',' (coma)
     Palabras más frecuentes con la etiqueta 'fc':
         , : 30148
 
     Etiqueta: 'np'  Frecuencia: 29113  Porcentaje del total: 5.63
+    Significado: Nombre Propio
     Palabras más frecuentes con la etiqueta 'np':
         Gobierno : 554
         España : 380
@@ -107,12 +114,14 @@ PLN-2015$ python tagging/scripts/stats.py
         Madrid : 196
 
     Etiqueta: 'fp'  Frecuencia: 21157  Porcentaje del total: 4.09
+    Significado: Símbolos ',' '(' y ')' (punto y paréntesis)
     Palabras más frecuentes con la etiqueta 'fp':
         . : 17513
         ( : 1823
         ) : 1821
 
     Etiqueta: 'rg'  Frecuencia: 15333  Porcentaje del total: 2.96
+    Significado: Adjetivo General
     Palabras más frecuentes con la etiqueta 'rg':
         más : 1707
         hoy : 772
@@ -121,6 +130,7 @@ PLN-2015$ python tagging/scripts/stats.py
         ya : 544
 
     Etiqueta: 'cc'  Frecuencia: 15023  Porcentaje del total: 2.90
+    Significado: Conjunción Coordinada
     Palabras más frecuentes con la etiqueta 'cc':
         y : 11211
         pero : 938
