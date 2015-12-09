@@ -36,7 +36,7 @@ class MEMM:
 
         features = [word_lower, word_istitle, word_isupper, word_isdigit]
         features += [PrevWord(f) for f in features]
-        features += [NPrevTags(i) for i in range(1, n - 1)]
+        features += [NPrevTags(i) for i in range(1, n)]
 
         vect = Vectorizer(features)
         clf = classifiers[classifier]()
