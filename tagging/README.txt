@@ -215,14 +215,14 @@ nosetests tagging/tests/test_baseline.py
 
 RESULTADOS:
 
-Accuracy (global):                      89.04%
-Accuracy sobre palabras conocidas:      95.36%
+Accuracy (global):                      89.06%
+Accuracy sobre palabras conocidas:      95.37%
 Accuracy sobre palabras desconocidas:   31.80%
 
 Tiempo (en segundos)
-real 11.92sec
-user 11.40
-sys   0.20
+real 7.37
+user 6.67
+sys 0.37
 
 Matriz de confusión en base-confusion-matrix.png, .txt
 
@@ -250,36 +250,36 @@ Accuracy (global):                      89.01%
 Accuracy sobre palabras conocidas:      95.32%
 Accuracy sobre palabras desconocidas:   31.80%
 
-real 36.94sec
-user 36.31
-sys   0.29
+real 22.81
+user 22.42
+sys 0.19
 
 n = 2
 Accuracy (global):                      92.72%
 Accuracy sobre palabras conocidas:      97.61%
 Accuracy sobre palabras desconocidas:   48.42%
 
-real 68.54sec
-user 67.99
-sys   0.24
+real 37.20
+user 36.86
+sys 0.17
 
 n = 3
 Accuracy (global):                      93.17%
 Accuracy sobre palabras conocidas:      97.67%
 Accuracy sobre palabras desconocidas:   52.31%
 
-real 256.31sec
-user 255.71
-sys   0.33
+real 132.64
+user 129.34
+sys 3.07
 
 n = 4
 Accuracy (global):                      93.14%
 Accuracy sobre palabras conocidas:      97.44%
 Accuracy sobre palabras desconocidas:   54.14%
 
-real 1484.23sec
-user 1483.50
-sys   0.82
+real 756.22
+user 752.93
+sys 2.07
 
 
 EJERCICIO 6: Features para Etiquetado de Secuencias
@@ -298,36 +298,36 @@ Accuracy (global):                      92.70%
 Accuracy sobre palabras conocidas:      95.28%
 Accuracy sobre palabras desconocidas:   69.32%
 
-real 75.12sec
-user 73.89
-sys   0.30
+real 36.62
+user 34.14
+sys 0.66
 
 n = 2
-Accuracy (global):                      92.70%
-Accuracy sobre palabras conocidas:      95.28%
-Accuracy sobre palabras desconocidas:   69.32%
-
-real 75.27sec
-user 74.21
-sys   0.22
-
-n = 3
 Accuracy (global):                      91.99%
 Accuracy sobre palabras conocidas:      94.55%
 Accuracy sobre palabras desconocidas:   68.75%
 
-real 80.60sec
-user 79.54
-sys   0.24
+real 39.10
+user 37.95
+sys 0.62
 
-n = 4
+n = 3
 Accuracy (global):                      92.18%
 Accuracy sobre palabras conocidas:      94.72%
 Accuracy sobre palabras desconocidas:   69.20%
 
-real 86.14sec
-user 84.94
-sys   0.26
+real 42.13
+user 41.37
+sys 0.19
+
+n = 4
+Accuracy (global):                      92.23%
+Accuracy sobre palabras conocidas:      94.72%
+Accuracy sobre palabras desconocidas:   69.62%
+
+real 42.92
+user 42.63
+sys 0.13
 
 Clasificador MultinomialNB
 n = 1
@@ -335,23 +335,23 @@ Accuracy (global):                      82.18%
 Accuracy sobre palabras conocidas:      85.85%
 Accuracy sobre palabras desconocidas:   48.89%
 
-real 1439.07sec
-user 1437.63
-sys   0.28
+real 1224.37
+user 1222.03
+sys 1.15
 
 n = 2
-Accuracy (global):                      82.18%
-Accuracy sobre palabras conocidas:      85.85%
-Accuracy sobre palabras desconocidas:   48.89%
-
-real 1439.43sec
-user 1437.82
-sys   0.30
-
-n = 3
 Accuracy (global):                      76.46%
 Accuracy sobre palabras conocidas:      80.41%
 Accuracy sobre palabras desconocidas:   40.68%
+
+real 1244.73
+user 1236.53
+sys 4.16
+
+n = 3
+Accuracy (global):                      71.47%
+Accuracy sobre palabras conocidas:      75.09%
+Accuracy sobre palabras desconocidas:   38.59%
 
 real 1226.13sec
 user 1225.88
@@ -373,33 +373,33 @@ Accuracy (global):                      94.43%
 Accuracy sobre palabras conocidas:      97.04%
 Accuracy sobre palabras desconocidas:   70.82%
 
-real 68.21sec
-user 67.82
-sys   0.12
+real 35.42
+user 35.12
+sys 0.13
 
 n = 2
-Accuracy (global):                      94.43%
-Accuracy sobre palabras conocidas:      97.04%
-Accuracy sobre palabras desconocidas:   70.82%
-
-real 73.25sec
-user 72.72
-sys   0.24
-
-n = 3
 Accuracy (global):                      94.29%
 Accuracy sobre palabras conocidas:      96.91%
 Accuracy sobre palabras desconocidas:   70.57%
 
-real 81.06sec
-user 80.52
-sys   0.25
+real 42.55
+user 42.03
+sys 0.27
 
-n = 4
+n = 3
 Accuracy (global):                      94.40%
 Accuracy sobre palabras conocidas:      96.94%
 Accuracy sobre palabras desconocidas:   71.38%
 
-real 85.23sec
-user 84.73
-sys   0.22
+real 46.25
+user 45.84
+sys 0.17
+
+n = 4
+Accuracy (global):                      94.46%
+Accuracy sobre palabras conocidas:      96.96%
+Accuracy sobre palabras desconocidas:   71.81%
+
+real 57.38
+user 56.31
+sys 0.71
