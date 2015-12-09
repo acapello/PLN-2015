@@ -358,9 +358,9 @@ user 1225.88
 sys   0.42
 
 n = 4
-Accuracy (global):                      71.47%
-Accuracy sobre palabras conocidas:      75.09%
-Accuracy sobre palabras desconocidas:   38.59%
+Accuracy (global):                      68.20%
+Accuracy sobre palabras conocidas:      71.31%
+Accuracy sobre palabras desconocidas:   40.01%
 
 real 1154.15sec
 user 1153.83
