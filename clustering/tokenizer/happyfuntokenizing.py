@@ -1,5 +1,5 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# python 3 code
 
 """
 This code implements a basic, Twitter-aware tokenizer.
@@ -150,17 +150,17 @@ class Tokenizer:
         """
         # Try to ensure unicode:
         try:
-            s = unicode(s)
+            s = str(s, 'utf-8')
         except UnicodeDecodeError:
             s = str(s).encode('string_escape')
-            s = unicode(s)
+            s = str(s, 'utf-8')
         # Fix HTML character entitites:
         s = self.__html2unicode(s)
         # Tokenize:
         words = word_re.findall(s)
         # Possible alter the case, but avoid changing emoticons like :D into :d:
         if not self.preserve_case:
-            words = map((lambda x : x if emoticon_re.search(x) else x.lower()), words)
+            words = list(map((lambda x : x if emoticon_re.search(x) else x.lower()), words))
         return words
 
     def tokenize_random_tweet(self):
