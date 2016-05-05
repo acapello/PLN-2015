@@ -6,7 +6,9 @@ def get_tweets():
         con toda su info. (entre ella el texto y el usuario)
     """
     f = open('clustering/corpus/tweets-balotaje1.txt', 'r')
-    s = f.read()
+    g = open('clustering/corpus/tweets-balotaje2.txt', 'r')
+    h = open('clustering/corpus/tweets-balotaje3.txt', 'r')
+    s = f.read() + g.read() + h.read()
     sp = s.split('\n')
     ts = [sp[i] for i in range(len(sp)) if i % 2 == 0 and sp[i] != '']
     tweets = []

@@ -40,8 +40,10 @@ def print_wordclouds_by_cluster(clf, users):
     for cl_id, users_ids in clf.items():
         text = ""
         for u_id in users_ids:
-            f = lambda string: string[:5] != "https"
-            tokens = filter(f, users[u_id].tokens)
+            tokens = set()
+            for tweet in users[u_id].tweets:
+                tokens.update(tweet['tokens'])
+
             text += " ".join(tokens) + " "
 
         # Generate a word cloud image, take relative word frequencies into account, lower max_font_size
