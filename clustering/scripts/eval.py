@@ -20,6 +20,7 @@ import pickle
 from collections import defaultdict
 from wordcloud import WordCloud # https://github.com/amueller/word_cloud
 import matplotlib.pyplot as plt
+import os, shutil # for creating / removing directory
 
 
 def get_users_by_cluster(users, pipeline):
@@ -34,24 +35,35 @@ def get_users_by_cluster(users, pipeline):
 
     return clf
 
-def print_wordclouds_by_cluster(clf, users):
+def plot_wordclouds_by_cluster(clf, users):
     """ clf: la clasificación. (diccionario cluster_id:lista de user ids)
+
     """
+    # reset directory for wordclouds
+    dir = 'clustering/wordclouds'
+    if os.path.exists(dir):
+        shutil.rmtree(dir)
+    os.makedirs(dir)
+
     for cl_id, users_ids in clf.items():
         text = ""
         for u_id in users_ids:
             tokens = set()
-            for tweet in users[u_id].tweets:
-                tokens.update(tweet['tokens'])
+            # for tweet in users[u_id].tweets:
+            #     tokens.update(tweet['tokens'])
+            tokens.update(users[u_id].hashtags)
 
             text += " ".join(tokens) + " "
 
         # Generate a word cloud image, take relative word frequencies into account, lower max_font_size
-        wordcloud = WordCloud(background_color="white", max_font_size=40, relative_scaling=.5).generate(text)
-        plt.figure()
+        # can add max_font_size=40, relative_scaling=.5
+        wordcloud = WordCloud(width=800, height=400, background_color="white", relative_scaling=.5).generate(text)
+        plt.figure(figsize=(20,10), facecolor='k')
         plt.imshow(wordcloud)
         plt.axis("off")
-        plt.show()
+        plt.tight_layout(pad=1)
+        # plt.show()
+        plt.savefig("clustering/wordclouds/wc_cluster_{}".format(cl_id))
 
 
 if __name__ == '__main__':
@@ -67,4 +79,4 @@ if __name__ == '__main__':
 
     # evaluate
     clf = get_users_by_cluster(model.users, model.pipeline)
-    print_wordclouds_by_cluster(clf, model.users)
+    plot_wordclouds_by_cluster(clf, model.users)

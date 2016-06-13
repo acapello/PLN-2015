@@ -3,17 +3,6 @@
 from featureforge.feature import Feature
 
 
-# class IsUsedToken(Feature):
-#     """ Feature paramétrico que dice si un token es usado por el usuario
-#         (en el vector de features, uno por cada token en el vocabulario)
-#     """
-#     def __init__(self, token):
-#         self.token = token
-
-#     def _evaluate(self, u):
-#         assert isinstance(u, User)
-#         return self.token in u.tokens
-
 def bag_of_words(user):
     tokens = set()
     for tweet in user.tweets:
@@ -21,23 +10,48 @@ def bag_of_words(user):
 
     return tokens
 
+def bag_of_bigrams(user):
+    bigrams = set()
+    for tweet in user.tweets:
+        last = 'BOS'
+        for token in tweet['tokens']:
+            bigrams.add((last, token))
+            last = token
+
+    return bigrams
+
 def bag_of_hashtags(user):
     return user.hashtags
-
-# def bag_of_bigrams(user):
-#     return user.bigrams
-
-# def user_name(user):
-
-
-def user_location(user):
-    return user.location
 
 def user_description(user):
     return set(user.description)
 
-# def user_is_verified(user):
-#     return user.user_info['verified']
+def user_location(user):
+    return user.location
 
-# def user_retweeted(user):
-#     return 'el conjunto de usuario que este usuario retwiteo'
+def user_name(user):
+    return user.name
+
+def user_is_verified(user):
+    return user.verified
+
+def user_sum_favourites(user):
+    return user.sum_favourites
+
+def user_sum_retweet_count(user):
+    return user.sum_retweet_count
+
+
+class user_retweet_related(Feature):
+
+    def __init__(self, users_dict):
+        self.users_dict = users_dict
+
+    def _evaluate(self, user):
+        users_related = set()
+        for u_id in user.retweeted_by + user.retweeted_to:
+            u = self.users_dict[u_id]
+            users_related.add(u.id_str)
+        users_related.add(user.id_str)
+
+        return users_related
