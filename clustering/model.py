@@ -5,8 +5,8 @@ from clustering.features import (bag_of_words, bag_of_bigrams, bag_of_hashtags,
 from collections import Counter, defaultdict
 from sklearn.cluster import KMeans
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
 from featureforge.vectorizer import Vectorizer
+# from sklearn.preprocessing import StandardScaler
 
 
 
@@ -17,50 +17,49 @@ class Model(object):
         self.tweets = tweets
         self.users = users = dict()
         self.get_users()
-        features = [bag_of_words,
+        features = [
+                    bag_of_words,
                     bag_of_hashtags,
-                    user_description,
                     user_retweet_related(users),
+                    # user_description,
                     # bag_of_bigrams,
                     # user_location,
                     # user_name,
-                    # user_is_verified
-                    # user_sum_favourites
-                    # user_sum_retweet_count
-        ]
+                    # user_is_verified,
+                    # user_sum_favourites,
+                    # user_sum_retweet_count,
+                   ]
         vect = Vectorizer(features)
         # scaler = StandardScaler(with_mean=False)
-        clf = KMeans(n_clusters=3)
+        clf = KMeans(init='k-means++', n_clusters=8)
         # self.pipeline = Pipeline(steps=[('vect', vect), ('scl', scaler), ('clf', clf)])
         self.pipeline = Pipeline(steps=[('vect', vect), ('clf', clf)])
         self.users_list = list(users.values())
         self.pipeline.fit(self.users_list)
+        self.labels = self.pipeline.steps[1][1].labels_
 
 
     def get_users(self):
-        """ Returns:
-            users dict: (user_id: User object)
-        """
         users = self.users
         for tweet in self.tweets:
             if tweet['text'][:2] != 'RT':
+                tweet['is_retweet'] = False
                 self.add_user(tweet)
             else:
-                # si es un retweet, tambien agrego al usuario que creo el tweet
-                # print(tweet)
+                # si es un retweet, tambien se agrega al usuario que creo el tweet.
                 try:
-                    # debería estar siempre este campo.. pero a veces no está
+                    # puede no estar este campo. En ese caso ignoramos el tweet.
                     source_tweet = tweet['retweeted_status']
                 except KeyError:
                     continue
 
-                # el texto del tweet es el mismo que el de origen..
-                # (sin rt y el nombre de usuario...) sino hay palabras incompletas.
-                tweet['text'] = source_tweet['text']
+                source_tweet['is_retweet'] = False
+                tweet['is_retweet'] = True
+                tweet['text'] = None #source_tweet['text']
                 self.add_user(tweet)
                 self.add_user(source_tweet)
 
-                # update retweeted attributes
+                # actualizar atributos relacionados a retweet
                 uid = tweet['user']['id']
                 retweeted_uid = source_tweet['user']['id']
                 users[uid].retweeted_to.append(retweeted_uid)
