@@ -11,38 +11,38 @@ Cluster 0: 100 usuarios - 90 retwitteros
 	                 afano   8            1         
 	         mauriciomacri   6            3         
 	          danielscioli   5            2         
+	              vantagem   4            1         
 	                 mesas   4            1         
 	            escrutadas   4            1         
 	                 votos   4            2         
-	              vantagem   4            1         
+	                  acta   3            1         
 	            presidente   3            2         
 	    mauriciopresidente   3            1         
-	                  acta   3            1         
-	               capital   2            1         
-	                   com   2            1         
-	               rosario   2            2         
-	                   c5n   2            1         
+	              retiocba   2            1         
+	                  deve   2            1         
+	                rating   2            1         
+	           elegistelt3   2            1         
 --------------------------------------------------------------------------------
 Cluster 1: 146 usuarios - 143 retwitteros
 	20 tokens más usados:    repeticiones usuarios que lo usaron
 	                     k   91           2         
 	          danielscioli   75           1         
 	                    no   51           3         
-	             renconres   49           1         
-	                 gusta   49           1         
-	                formen   49           1         
-	                    si   49           1         
-	             cambiemos   49           1         
-	                 ganen   49           1         
-	         resentimiento   49           1         
 	               partido   49           1         
+	             renconres   49           1         
+	                formen   49           1         
+	         resentimiento   49           1         
+	                 gusta   49           1         
+	                 ganen   49           1         
 	                 gente   49           1         
-	               quieren   42           2         
+	             cambiemos   49           1         
+	                    si   49           1         
 	                  pais   42           2         
-	                queden   41           1         
-	                 pedir   41           1         
-	                 mejor   41           1         
+	               quieren   42           2         
 	              trabajar   41           1         
+	                queden   41           1         
+	         mauriciomacri   41           1         
+	                 pedir   41           1         
 	        reconciliacion   41           1         
 	                    ir   41           1         
 --------------------------------------------------------------------------------
@@ -81,16 +81,16 @@ Cluster 3: 120 usuarios - 108 retwitteros
 	               cordoba   29           1         
 	               twitter   28           1         
 	             menciones   26           1         
-	              agusffox   22           1         
-	            terminamos   22           1         
-	          facucarrillo   22           1         
 	             bacomuna2   22           1         
+	            terminamos   22           1         
+	              agusffox   22           1         
+	          facucarrillo   22           1         
 	              cantidad   21           1         
 	                 mayor   21           1         
 	               momento   21           1         
 	                  casi   18           1         
 	                    no   15           4         
-	                  sanz   14           1         
+	               partido   14           1         
 --------------------------------------------------------------------------------
 Cluster 4: 935 usuarios - 567 retwitteros
 	20 tokens más usados:    repeticiones usuarios que lo usaron
@@ -128,15 +128,15 @@ Cluster 5: 748 usuarios - 330 retwitteros
 	                 vamos   62           27        
 	      sciolipresidente   52           32        
 	                  pais   51           33        
-	            companeros   45           7         
 	                 datos   45           10        
+	            companeros   45           7         
 	                  casa   42           6         
 	               memoria   40           21        
 	                cambio   39           12        
-	                 ganan   38           2         
-	             oficiales   38           10        
 	                pueblo   38           10        
+	                  nada   38           13        
 	               hashtag   38           3         
+	                 ganan   38           2         
 --------------------------------------------------------------------------------
 Cluster 6: 5163 usuarios - 3700 retwitteros
 	20 tokens más usados:    repeticiones usuarios que lo usaron
@@ -180,8 +180,8 @@ Cluster 7: 1078 usuarios - 41 retwitteros
 	         mauriciomacri   302          91        
 	             cambiemos   276          64        
 	                lilita   256          7         
-	               gerardo   253          1         
 	                romano   253          1         
+	               gerardo   253          1         
 	                 ahora   252          60        
 --------------------------------------------------------------------------------
 ================================================================================
@@ -375,6 +375,8 @@ Usuarios más relevantes de cada cluster:
 Cluster 0:
           Username   Id                   Rt por                             
           dylantcp   2899869447           0            239200202 
+           danycea   139891587            0            239200202 
+       srta_yeyuok   92895210             0            239200202 
           PrisCa58   118420647            0            2         
     UnidasxKristen   1270027111           0            239200202 
          Candelaps   172192783            0            239200202 
@@ -391,7 +393,10 @@ Cluster 0:
             Frmaza   144527487            0            239200202 
       CamiCantelmi   254327497            0            239200202 
        mariano_dbv   368300020            0            239200202 
+    lautymorenocab   1723069026           0            239200202 
+         pililemos   169252795            0            239200202 
    ManuAmendolarad   2916834406           0            239200202 
+        gratoledo1   1610372268           0            239200202 
      KkaritoFarias   1507185248           0            239200202 
           laurilov   117411062            0            239200202 
         gracie_lar   2971815219           0            239200202 
@@ -407,19 +412,14 @@ Cluster 0:
        Jo_CivilWar   26878593             0            239200202 
         BaebyJewel   210935730            0            239200202 
         loverajuan   177807195            0            239200202 
-    belendeangelis   158898158            0            239200202 
-         FdezRoger   308254210            0            239200202 
-   FrancoMozotegui   160007480            0            239200202 
-         GuilleB30   268533881            0            239200202 
-           danycea   139891587            0            239200202 
-       srta_yeyuok   92895210             0            239200202 
-    lautymorenocab   1723069026           0            239200202 
-         pililemos   169252795            0            239200202 
-        gratoledo1   1610372268           0            239200202 
          Cintivany   3720748757           0            239200202 
        carolasainz   202874020            0            239200202 
       fabi_alberti   203560761            0            239200202 
+    belendeangelis   158898158            0            239200202 
+         FdezRoger   308254210            0            239200202 
+   FrancoMozotegui   160007480            0            239200202 
         FeedeCap22   1385170046           0            239200202 
+         GuilleB30   268533881            0            239200202 
       Laura134Mara   2203541816           0            2         
       bautistajuar   2606552552           0            2         
          FikoUrich   404511361            0            3         
