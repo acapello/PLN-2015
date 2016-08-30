@@ -14,7 +14,7 @@ def tokenize_text(text):
     tokenized = t.tokenize(text)
     tokens = []
     for token in tokenized:
-        token = re.sub(r'[^\w]', '', token) # quita simbolos
+        token = re.sub(r'[^\w]', '', token)  # quita simbolos
         if token not in excluded and not token.isnumeric() and token[:4] != 'http':
             if token != '':
                 tokens.append(token)
@@ -28,12 +28,11 @@ def get_tweet_struct(tweet):
     retweet_count = int(tweet['retweet_count'])
     hashtag_list = tweet['entities']['hashtags']
     hashtags = [hashtag_list[i]['text'] for i in range(len(hashtag_list))]
-    d = {'tokens': tokens, # token list for the tweet without function words
+    d = {'tokens': tokens,  # token list for the tweet without function words
          'favorite_count': favorite_count,
          'retweet_count': retweet_count,
          'hashtags': hashtags,
-         'raw_tweet': tweet
-    }
+         'raw_tweet': tweet}
 
     return d
 
@@ -42,11 +41,11 @@ class User:
 
     def __init__(self, tweet):
 
-        self.id = tweet['user']['id']           #int
-        self.id_str = tweet['user']['id_str']   #str
+        self.id = tweet['user']['id']           # int
+        self.id_str = tweet['user']['id_str']   # str
         self.description = tokenize_text(tweet['user']['description'])
-        self.followers_count = int(tweet['user']['followers_count']) # (seguidores)
-        self.friends_count = int(tweet['user']['friends_count']) # (seguidos)
+        self.followers_count = int(tweet['user']['followers_count'])  # (seguidores)
+        self.friends_count = int(tweet['user']['friends_count'])  # (seguidos)
         self.location = tokenize_text(tweet['user']['location'])
         self.name = tokenize_text(tweet['user']['name'])
         self.screen_name = tweet['user']['screen_name']

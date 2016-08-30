@@ -10,6 +10,7 @@ def bag_of_words(user):
 
     return tokens
 
+
 def bag_of_bigrams(user):
     bigrams = set()
     for tweet in user.tweets:
@@ -20,23 +21,30 @@ def bag_of_bigrams(user):
 
     return bigrams
 
+
 def bag_of_hashtags(user):
     return user.hashtags
+
 
 def user_description(user):
     return set(user.description)
 
+
 def user_location(user):
     return user.location
+
 
 def user_name(user):
     return user.name
 
+
 def user_is_verified(user):
     return user.verified
 
+
 def user_sum_favourites(user):
     return user.sum_favourites
+
 
 def user_sum_retweet_count(user):
     return user.sum_retweet_count

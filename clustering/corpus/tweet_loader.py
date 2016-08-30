@@ -1,4 +1,5 @@
-import json # 'loads' used
+import json  # 'loads' used
+
 
 def get_tweets():
     """ Obtener tweets (puros por el momento (sin RT))
@@ -19,7 +20,7 @@ def get_tweets():
     for t in ts:
         d = json.loads(t)
         a = d.get('text', '')
-        if len(a) > 2: # and a[:2] != 'RT'
+        if len(a) > 2:  # and a[:2] != 'RT'
             tweets.append(d)
 
     f.close()

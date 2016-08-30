@@ -10,9 +10,7 @@ Options:
   -o <file>     Output model file.
   -h --help     Show this screen.
 """
-# import sys
-# sys.path.append("../")
-# sys.path.append("../clustering")
+
 from docopt import docopt
 import pickle
 
@@ -26,6 +24,10 @@ if __name__ == '__main__':
     # load the data
     # print("Loading corpus data...")
     tweets = get_tweets()
+    # tweets1 = pickle.load(open('clustering/corpus/tweets1', 'rb'))
+    # tweets2 = pickle.load(open('clustering/corpus/tweets2', 'rb'))
+    # tweets3 = pickle.load(open('clustering/corpus/tweets3', 'rb'))
+    # tweets = tweets1 #+ tweets2 + tweets3
     model = Model(tweets)
 
     # save it
