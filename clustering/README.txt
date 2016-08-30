@@ -27,12 +27,26 @@ $ workon pln-2015
 Y el prompt debería quedar parecido a lo siguiente:
 (pln-2015):~[some-folders...]/PLN-2015$
 
+EJEMPLOS PARA ENTRENAR/EVALUAR:
 
-ENTRENAR EL MODELO:
+Entrenar un modelo:
 PLN-2015$ python clustering/scripts/train.py -o model
+Nota: predeterminadamente, se entrena el modelo buscando 8 clusters con el algoritmo K-Means.
 
-EVALUAR EL MODELO:
-PLN-2015$ python clustering/scripts/eval.py -o model
+
+Evaluar un modelo:
+PLN-2015$ python clustering/scripts/eval.py -i model
+Nota: es recomendado redirigir la salida a un archivo.
+Las nubes de palabras de cada cluster se encontrarán en la carpeta clustering/wordclouds.
+
+
+Obtener información del usuario con id 117866979 (como sus tweets y nombre):
+PLN-2015$ python clustering/scripts/print_user_data.py -u 117866979 -i model
+
+
+Obtener información de los 10 usuarios más relevantes del cluster 5:
+PLN-2015$ python clustering/scripts/print_relevant_users.py -i model -c 5 -n 10
+
 
 
 MODULOS REQUERIDOS:

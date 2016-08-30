@@ -18,9 +18,9 @@ import pickle
 
 def print_user_data(u):
     name = u.tweets[0]['raw_tweet']['user']['name']
-    description = u.tweets[0]['raw_tweet']['user']['description']
-    print("Usuario: {:<12}    Nombre: {:<12}".format(u.screen_name, name))
+    print("Usuario: {:<12}    Nombre: {:<12}    Id: {:<12}".format(u.screen_name, name, u.id))
     print("Seguidores: {:<12} Seguidos: {:<12}".format(u.followers_count, u.friends_count))
+    description = str(u.tweets[0]['raw_tweet']['user']['description'])
     print("Descripción: {:<12}".format(description))
 
     print("Retwitteado por: {:<12}".format(" ".join(map(str, u.retweeted_by))))
