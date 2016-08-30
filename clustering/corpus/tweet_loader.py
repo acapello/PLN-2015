@@ -8,7 +8,7 @@ def get_tweets():
     """
     f = open('clustering/corpus/tweets-balotaje1.txt', 'r')
     g = open('clustering/corpus/tweets-balotaje2.txt', 'r')
-    h = open('clustering/corpus/tweets-balotaje3.txt', 'r')
+    # h = open('clustering/corpus/tweets-balotaje3.txt', 'r')
     # s = f.read()
     # s = g.read()
     s = f.read() + g.read()
@@ -25,5 +25,5 @@ def get_tweets():
 
     f.close()
     g.close()
-    h.close()
+    # h.close()
     return tweets
