@@ -143,7 +143,7 @@ def print_relevant_users(sorted_users_bycl, print_n):
     print("Usuarios más relevantes de cada cluster:")
     for cl_id, users in sorted_users_bycl.items():
         print("Cluster {}:".format(cl_id))
-        print("{:>18}   {:<18}   {:<35}".format('Username', 'Id', 'Rt por', 'Rt a'))
+        print("{:>18}   {:<18}   {:<18}   {:<18}".format('Username', 'Id', 'Rt por', 'Rt a'))
         for u in users[:print_n]:
             # if len(u.retweeted_to) == 1:
             #     continue
@@ -154,7 +154,7 @@ def print_relevant_users(sorted_users_bycl, print_n):
             rt_by = rt_by if rt_by != 1 else u.retweeted_by[0]
             rt_to = len(u.retweeted_to)
             rt_to = rt_to if rt_to != 1 else u.retweeted_to[0]
-            print("{:>18}   {:<18}   {:<10}   {:<10}".format(
+            print("{:>18}   {:<18}   {:<18}   {:<18}".format(
                 u.screen_name, u.id, rt_by, rt_to)
             )
         print('-' * 80)
@@ -171,13 +171,13 @@ def most_relevant_features_by_cluster(model, take_n):
         l = sorted(zip(coord, range(len(coord))), reverse=True)[:take_n]
         best_features[i] = list(list(zip(*l))[1])
 
-    print("{:>18}   {:<22}".format('Feature', 'Tipo'))
     for cl_id, cols in best_features.items():
         print("Cluster {}:".format(cl_id))
+        print("{:>18}   {:<22}".format('Feature', 'Tipo'))
         for col in cols:
             feat = vect.column_to_feature(col)
             print("{:>18}   {:<22}".format(str(feat[1]), feat[0].name))
-        print()
+        print('-' * 80)
 
 
 if __name__ == '__main__':

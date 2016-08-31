@@ -1,0 +1,1038 @@
+CLUSTER 0
+
+Cluster 0: 100 usuarios - 90 retwitteros
+    20 tokens más usados:    repeticiones usuarios que lo usaron
+                 cambiemos   99           10
+                       fpv   94           7
+                     macri   89           5
+                    scioli   86           3
+                 escrutado   78           2
+                      mesa   9            2
+                     afano   8            1
+             mauriciomacri   6            3
+              danielscioli   5            2
+                escrutadas   4            1
+                     votos   4            2
+                     mesas   4            1
+                  vantagem   4            1
+                presidente   3            2
+        mauriciopresidente   3            1
+                      acta   3            1
+               radiosuquia   2            1
+                   cordoba   2            1
+           transitocordoba   2            1
+                        em   2            1
+--------------------------------------------------------------------------------
+           Feature   Tipo
+Cluster 0:
+         cambiemos   bag_of_hashtags
+               fpv   bag_of_hashtags
+     ballotage2015   bag_of_hashtags
+         239200202   user_retweet_related
+    elecciones2015   bag_of_hashtags
+      balotaje2015   bag_of_hashtags
+             macri   bag_of_hashtags
+         cambiemos   bag_of_words
+            scioli   bag_of_hashtags
+         176427185   user_retweet_related
+         124779370   user_retweet_related
+               fpv   bag_of_words
+          51890039   user_retweet_related
+   macripresidente   bag_of_hashtags
+             macri   bag_of_words
+          26642796   user_retweet_related
+mauriciopresidente   bag_of_hashtags
+           cordoba   bag_of_hashtags
+          balotaje   bag_of_hashtags
+         355019584   user_retweet_related
+--------------------------------------------------------------------------------
+Cluster 0:
+          Username   Id                   Rt por       Rt a
+          dylantcp   2899869447           0            239200202
+           danycea   139891587            0            239200202
+       srta_yeyuok   92895210             0            239200202
+          PrisCa58   118420647            0            2
+    UnidasxKristen   1270027111           0            239200202
+         Candelaps   172192783            0            239200202
+   IgnacioAguinaga   575623914            0            239200202
+       CaroNunezBJ   1486485655           0            239200202
+        Solcis9315   3684593956           0            239200202
+             ew571   120090539            0            239200202
+         facuuLez6   2458480553           0            239200202
+        chocofruti   341761562            0            239200202
+         fetcheves   37529477             0            239200202
+          ENZO9527   146074610            0            239200202
+       FlorrGrillo   362833678            0            239200202
+            Frmaza   144527487            0            239200202
+      CamiCantelmi   254327497            0            239200202
+       mariano_dbv   368300020            0            239200202
+    lautymorenocab   1723069026           0            239200202
+         pililemos   169252795            0            239200202
+   ManuAmendolarad   2916834406           0            239200202
+        gratoledo1   1610372268           0            239200202
+     KkaritoFarias   1507185248           0            239200202
+        gracie_lar   2971815219           0            239200202
+    cazadoraoculta   55823235             0            239200202
+         maxtortul   312393043            0            239200202
+       LautiKreter   972962966            0            239200202
+           KitiPig   133127930            0            239200202
+    natydebanfield   1616557855           0            239200202
+         emisoto96   431782416            0            239200202
+     GonzaaCassini   217122291            0            239200202
+      NanuBarletta   586095402            0            239200202
+       Jo_CivilWar   26878593             0            239200202
+        BaebyJewel   210935730            0            239200202
+        loverajuan   177807195            0            239200202
+       carolasainz   202874020            0            239200202
+      fabi_alberti   203560761            0            239200202
+    belendeangelis   158898158            0            239200202
+         FdezRoger   308254210            0            239200202
+   FrancoMozotegui   160007480            0            239200202
+        FeedeCap22   1385170046           0            239200202
+         GuilleB30   268533881            0            239200202
+           Xily_27   556166393            0            239200202
+          laurilov   117411062            0            239200202
+         Isandy671   2793130617           0            239200202
+         Cintivany   3720748757           0            239200202
+      Laura134Mara   2203541816           0            2
+      bautistajuar   2606552552           0            2
+         FikoUrich   404511361            0            3
+          alb_hren   979050714            0            2
+--------------------------------------------------------------------------------
+USUARIOS SIGNIFICATIVOS
+
+Usuario: RealTimeRating    Nombre: RealTimeRating    Id: 239200202
+Seguidores: 161914       Seguidos: 751
+Descripción: Rating Minuto a Minuto de ARG by Ibope
+Rating TV | #Rating FM / AM | #Rating CABLE | #ElJuegoDelRating #RatingRETRO @RealTimeMundo RealTimeContacto@Gmail.com
+Retwitteado por: 3402971704 3684593956 1587522038 2899869447 175496227 146074610 238864720 210987269 103130646 2606133272 96171938 556166393 210935730 118420647 185190480 2606552552 37529477 118420647 2793130617 134523635 160007480 972962966 1270027111 1005451212 139891587 375223674 801663823 362833678 2916834406 4197806475 2225545244 213873395 88275447 1723069026 343051730 312393043 268533881 2203541816 308254210 254327497 586095402 575623914 526670021 259707043 622324271 1084888850 1507185248 268986132 158898158 368300020 133127930 1616557855 169252795 202874020 404511361 1385170046 1486485655 1610372268 3720748757 203560761 217122291 2448235680 26878593 157049308 172192783 120090539 979050714 191161011 177807195 210707746 96191961 341761562 144527487 2458480553 92895210 2971815219 431782416 55823235 117411062
+
+
+===================================================================================================================================================================
+
+CLUSTER 1
+
+Cluster 1: 146 usuarios - 143 retwitteros
+    20 tokens más usados:    repeticiones usuarios que lo usaron
+                         k   91           2
+              danielscioli   75           1
+                        no   51           3
+                        si   49           1
+                 renconres   49           1
+                     gente   49           1
+                     ganen   49           1
+                   partido   49           1
+                     gusta   49           1
+             resentimiento   49           1
+                    formen   49           1
+                 cambiemos   49           1
+                   quieren   42           2
+                      pais   42           2
+                    queden   41           1
+                        ir   41           1
+                     mejor   41           1
+             mauriciomacri   41           1
+                     pedir   41           1
+            reconciliacion   41           1
+--------------------------------------------------------------------------------
+Cluster 1:
+         533573263   user_retweet_related
+         cambiemos   bag_of_hashtags
+    reconciliacion   bag_of_hashtags
+    elecciones2015   bag_of_hashtags
+         argentina   bag_of_hashtags
+          51890039   user_retweet_related
+   argentinadecide   bag_of_hashtags
+             macri   bag_of_hashtags
+         349531605   user_retweet_related
+   macripresidente   bag_of_hashtags
+                no   bag_of_words
+         607311329   user_retweet_related
+        4049968690   user_retweet_related
+        2216739950   user_retweet_related
+         467420841   user_retweet_related
+        3407936824   user_retweet_related
+        1306197888   user_retweet_related
+          96761361   user_retweet_related
+         774596552   user_retweet_related
+        2186899622   user_retweet_related
+--------------------------------------------------------------------------------
+Cluster 1
+          Username   Id                   Rt por
+         ManuJamas   87064406             0            533573263
+            nirtza   156695877            0            533573263
+       karenviltte   2719775864           0            533573263
+   sebamontalvetti   382663794            0            533573263
+          ninfa916   193100673            0            533573263
+   martinezgustav4   631207437            0            533573263
+          AlejoCge   189606096            0            533573263
+       lagardere57   2186899622           0            533573263
+       KarlaAnalia   167246839            0            533573263
+      SabriTecilla   774596552            0            533573263
+      santiago_cde   164882107            0            533573263
+         999Guille   3436215227           0            533573263
+    ffaustomosiukk   1699832228           0            533573263
+        Mica__Carp   2928185387           0            533573263
+     reilongobardi   131913240            0            533573263
+           VCMirna   608850837            0            533573263
+      villegas3477   467420841            0            533573263
+      Ro_pavon22lp   2863056023           0            533573263
+     CeciliaOlmos_   3407987530           0            533573263
+       alexgrossba   2972924223           0            533573263
+         MiliGelos   469649400            0            533573263
+      valenmoscato   633320735            0            533573263
+         jdcardani   2341646643           0            533573263
+     mechimariscal   960868135            0            533573263
+   No_al_Comunismo   97203007             0            2
+    ezequielsonier   2209655647           0            533573263
+         solpalmer   703091852            0            533573263
+     lucaslopezok_   1031283840           0            533573263
+         flawenzel   182952885            0            533573263
+        CeleCorona   156312309            0            533573263
+    elisalilianasm   2541854031           0            533573263
+      gaspi_crotti   3422753705           0            533573263
+         gonzabehr   195465870            0            533573263
+       rauldifondi   138514737            0            533573263
+          jpchahin   72978307             0            533573263
+      Lauchasuszek   488050514            0            533573263
+   gisellegorbaran   617516672            0            533573263
+          Dami_Cab   4203443417           0            533573263
+          Roo_Vila   703545864            0            3
+     GreenSubmarin   360646845            0            533573263
+   nicolasserrano2   184525712            0            533573263
+     Twitty_Molina   132384559            0            533573263
+       Iankalister   1663565899           0            533573263
+       Novendohumo   270565364            0            533573263
+      patitoamayam   1306197888           0            533573263
+      HilachaSalas   850265856            0            533573263
+            ARISUB   96761361             0            533573263
+        matitolnay   270436403            0            533573263
+     santivazcolet   595617425            0            533573263
+       guillelauro   320300168            0            533573263
+--------------------------------------------------------------------------------
+USUARIOS SIGNIFICATIVOS
+
+Usuario: Lanataenel13    Nombre: Jorge Lanata PPT    Id: 533573263
+Seguidores: 934544       Seguidos: 529
+Descripción: Periodismo Para Todos - Lanata en el 13 - Cuenta NO oficial
+Retwitteado por: 115407728 41361385 3407936824 1337987041 380092378 146167253 22211844 950789623 62548681 196719018 633320735 774596552 617451860 114334045 60506487 2840211249 850265856 2972924223 132384559 1155964676 3407990512 1699832228 280711768 72978307 131913240 189606096 169750469 142827637 825953022 4121678950 89085098 960868135 26731767 1031283840 2341646643 164882107 138514737 124318443 270565364 753686839 4234638628 3837459255 3031627229 703545864 222269337 89085098 2173123430 195465870 3066524223 96761361 6606932 168566931 3419019556 120584538 1663565899 2928185387 202687198 138903951 1306197888 703545864 3013374827 26731767 2433951099 147820676 585800801 87064406 2178830954 182952885 270436403 360646845 485929439 3122667769 61776425 1511974537 62291159 128139285 703545864 178806089 2787088570 180861181 1068378180 61776425 351651875 233046782 193100673 493419185 913685186 144863458 3893396921 214456086 2173123430 3422753705 3407987530 145719623 631207437 172201080 469649400 320300168 1533414924 617516672 4039910099 769073090 149556724 1487442121 73822687 137002398 3063988403 4203443417 3382391086 105896658 164541776 2648649535 2863056023 488050514 329196580 2541854031 156695877 289894108 976511179 608850837 2327276444 2932392539 2515157993 3436215227 230746849 62644200 342257576 2209655647 1433186689 206781671 595617425 113671595 62644200 1009758228 497601472 75441261 2186899622 4047678255 139510908 703091852 167246839 1535154835 940392230 2216739950 184525712 4049968690 139510908 2948338780 467420841 1362483097 139510908 156312309 404511361 120595027 168662310 1061617814 382663794 404511361 2379068233 184200331 139510908 2187752535 97203007 2719775864 97203007
+
+
+===================================================================================================================================================================
+
+CLUSTER 2
+
+Cluster 2: 6626 usuarios - 4041 retwitteros
+    20 tokens más usados:    repeticiones usuarios que lo usaron
+             mauriciomacri   2298         836
+                        no   901          376
+              danielscioli   779          250
+                 oficiales   428          94
+                  primeros   422          109
+                presidente   402          160
+                democracia   398          89
+                     datos   356          82
+                      gano   331          76
+             latinoamerica   331          31
+                    cambio   329          123
+                       dia   304          43
+                resultados   275          164
+                        si   257          143
+                 venezuela   246          120
+                 historico   242          20
+                     ahora   235          113
+                     nuevo   205          58
+               acompanando   203          2
+                 cambiemos   195          99
+--------------------------------------------------------------------------------
+Cluster 2:
+         argentina   bag_of_hashtags
+     mauriciomacri   bag_of_words
+   argentinadecide   bag_of_hashtags
+                no   bag_of_words
+      balotaje2015   bag_of_hashtags
+      danielscioli   bag_of_words
+             macri   bag_of_hashtags
+         124779370   user_retweet_related
+        elecciones   bag_of_hashtags
+          balotaje   bag_of_hashtags
+          62917505   user_retweet_related
+eleccionesargentina   bag_of_hashtags
+        resultados   bag_of_words
+        presidente   bag_of_words
+         cambiemos   bag_of_hashtags
+          33989170   user_retweet_related
+                si   bag_of_words
+             ahora   bag_of_hashtags
+            cambio   bag_of_words
+         venezuela   bag_of_words
+--------------------------------------------------------------------------------
+Cluster 2:
+          Username   Id                   Rt por
+        SalvaCleme   753629720            0            0
+      alejosefina2   127987377            0            0
+      Ios_Hermanos   4062763343           0            0
+      CamiQuirogaS   1117967696           0            0
+       JoacoStaffa   3154399854           0            0
+        SoRosales3   1229278022           0            0
+        EveeCohene   2490517440           0            0
+            JCSF23   1938574171           0            0
+         antodanni   260319730            0            0
+          lupo2214   2916948582           0            0
+   brunoblanco1310   1695269539           0            0
+          ayala206   537726579            0            0
+            cgtres   77696273             0            0
+          ja_labra   205982684            0            0
+            Pabol_   110783474            0            0
+      myloveisori_   3346826697           0            0
+         JUDIABADI   1961733001           0            0
+          ZNVISION   60785796             0            0
+   latinasacountry   2858320234           0            0
+         IbarraGra   147671299            0            0
+     RicardoMaggio   21377130             0            0
+      El_Santi1979   3220930489           0            0
+       BeraldiLuna   3369432149           0            0
+        GramiJuani   2945633275           0            0
+       fitobrandan   119386646            0            0
+     marianasulzer   458567009            0            0
+    MartinGerlero2   4252376807           0            0
+      wallyleproso   186999625            0            0
+      MirtaEncina4   4252696277           0            0
+         capochatv   171404580            0            0
+        darioknoch   2379979867           0            0
+          SevasPol   166992622            0            0
+    simoneltrrible   4230150683           0            0
+        ClaraaRock   566019073            0            0
+        JoeSpanoOk   153092091            0            124779370
+       CandeElenaa   164855674            0            124779370
+      tatii_lalita   3031990010           0            124779370
+      marcosartaza   857920650            0            124779370
+         NeeeecoDM   148733471            0            124779370
+        mandrakecl   37813520             0            124779370
+       OLIVOSPATRI   1471095361           0            124779370
+      BeluGalisteo   787348441            0            124779370
+    vallejovaleria   247036803            0            124779370
+        maximanera   147651231            0            124779370
+     MaquiAlifraco   196377029            0            124779370
+         SYantorno   310252603            0            124779370
+    sakura_kyoyama   95811862             0            124779370
+     RooSaarmiento   372416802            0            124779370
+        xeneixe_85   232764010            0            124779370
+      luisferayala   42988592             0            124779370
+--------------------------------------------------------------------------------
+USUARIOS SIGNIFICATIVOS
+
+Usuario: rialjorge       Nombre: JORGE RIAL      Id: 124779370
+Seguidores: 3444999      Seguidos: 1300
+Descripción: Periodista. http://Facebook.com/jorgerial2015| http://Instagram.com/Jrial  | http://bigbangnews.com
+Retwitteado por: 166723749 127953802 439138722 3198279470 249685626 974642136 783092654 255443488 2203541816 616604598 73979848 308700263 132706075 3976221975 73193018 4104007697 36218378 38006923 465013643 129319803 170457013 153108454 95811862 57692946 776514535 724300399 111914789 208649322 2990550161 84105983 262314689 52541795 1897327321 3658597702 2794535585 277813685 1175571674 2906219417 147651231 149164698 3024333945 1245207920 205489430 116962833 47167238 158554752 103911703 1177569270 132553757 196383162 154361523 2812057968 148733471 37813520 109025037 162962571 48588785 328214990 96171938 1641978066 851985175 179754587 1428647562 4106823201 1382805156 399442700 168742404 3225000647 278238139 543924485 3273341802 205331679 269657043 122120980 153092091 3374612699 404547173 42988592 2328847843 823992463 1599585884 59826847 208649322 167882666 60202249 465762682 128397006 151045706 191917462 273657356 2906570141 443315354 418752580 2744860575 158546760 857920650 1656276901 2606552552 255287062 617416409 223982389 105989865 230283349 157011950 165251080 154653504 719806048 147028417 836161194 137875775 196377029 263044061 2225545244 196847074 1239984258 471646273 3349642355 91589001 2149819113 147693934 462172443 354951769 968295348 482618566 35794557 178050817 467519141 487118862 725917999 41130606 133792155 492339344 3330491933 186244946 89994129 4093712907 3571131436 72304401 213873395 3014992318 310252603 2434707656 2766753760 177736495 3414121229 147208023 247036803 3433685961 177685819 3165865053 1864882190 1471095361 150472562 2657069869 3347895053 160015572 2985684832 601305780 192320875 496285945 201079377 458810310 2858650239 440202749 1084888850 1025073530 37557478 3435041075 1325035608 50374446 103591698 200923570 259707043 79230434 1656429452 276622163 2190770700 134963916 146638743 92186312 232764010 208694718 506469179 2200609710 163711665 321678625 197606596 472298652 101890021 368440232 585043109 193503326 167291284 3556864636 1213996074 136778535 2616148381 622191753 63661723 140978639 561377006 571182983 102671311 2885053944 3304193843 2542179685 387228874 195257183 339270760 489449686 4050214636 853129033 57512815 1036403377 1900832748 150123397 787348441 1861288164 1925692219 322833658 2858194023 220085364 1682225834 106553931 2837290204 627802666 3309610456 3213699528 372591929 3379368947 2774190928 372416802 171599644 407568794 4175815581 164855674 3170175124 902515322 389153937 389200154 168771953 226078266 165488590 3031990010
+
+
+Usuario: liliantintori    Nombre: Lilian Tintori    Id: 62917505
+Seguidores: 1857386      Seguidos: 4435
+Descripción: Activista por los #DDHH. Lucho por la Democracia y la Libertad. Madre de 2 y esposa de @LeopoldoLopez. #LiberenALeopoldo
+Retwitteado por: 741819620 116569706 136296830 142464170 2720144785 195585090 181231147 70977049 2983996247 95676202 199423063 76366790 127310272 2526243326 49049323 108425725 76272442 34420217 41294706 110771087 198209336 127724310 277751444 491756137 2810152550 85942478 155740189 165955964 111075846 255668816 222987754 111079992 116041329 199136772 755929447 208677336 231703212 138254575 633057512 574655406 107230920 2480955247 66251933 157838798 36447616 1056523765 417941527 267887653 514989092 186238593 1283422591 234955896 2220323742 247359361 314838141 1247708090 192725437 988042442 2552834503 52735602 429188155 498859900 154379312 376354704 1021263776 32964990 2745001485 3253004249 2465428913 156041931 2346718679 176784059 346205836 378009132 102593064 2196306933 635427145 172182693 3056296767 2434401928 1021004156 613470050 116733156 148880969 351241297 346682320 3237792623 4032004037 199496732 56032114 611119561 364046816 153567225 45944973 89085098 145886846 129038372 1084182636 115526614 500207092 68916322 126679070 121317461 16204918 88489787 155080321 2647389508 132311640 150687063 108841784 212915968 1012057938 101583331 112803638 573679252 103683953 3328946523 142581190 243930751 69437057 126722863 1006328947 1182980011 128900001 230504062 463794414 78472771 809400848 67804696 52590081 3770773055 369212706 1064289150 108464809 195933708 1241559164 69311938 86580904 575046007 349168341 593908873 159675222 3324670954 1275796842 87567515 232319104 88235147 108457515 519706573 326519449 134847909 566583346 1089980682 114063332 3048054074 1391063293 487766638 286237191 196777250 142058298 474257120 3376789696 866868338 76809835 64643748 1423536818 320478101 235148235 154831585 323596608 380092378 118481439 2342802194 150793885 132562083 561740204 715391742 2952365069 149298233 90248933 275672190 291727744 3357800403 50476764 115470982 70842374 2274669612 3313186893 3933608477 185675221 73379883 189924279 243487274 381167913 1035858740 1954623054 425101743 77293583 2368011006 148074871 111739548
+Retwitteo a:
+==================================== Tweets ====================================
+
+    En Argentina hoy es un día histórico para la democracia en Latinoamérica. Acompañando a @mauriciomacri https://t.co/EuDR1udzUd
+
+
+===================================================================================================================================================================
+
+CLUSTER 3
+
+Cluster 3: 120 usuarios - 108 retwitteros
+    20 tokens más usados:    repeticiones usuarios que lo usaron
+                     macri   124          4
+              eleccion2015   120          5
+                      mesa   103          3
+                resultados   87           3
+                    scioli   87           4
+                     ybtuc   81           2
+             mauriciomacri   34           4
+                   cordoba   29           1
+                   twitter   28           1
+                 menciones   26           1
+                  agusffox   22           1
+              facucarrillo   22           1
+                 bacomuna2   22           1
+                terminamos   22           1
+                   momento   21           1
+                  cantidad   21           1
+                     mayor   21           1
+                      casi   18           1
+                        no   15           4
+                   ganaron   14           1
+--------------------------------------------------------------------------------
+Cluster 3:
+          balotaje   bag_of_hashtags
+      decision2015   bag_of_hashtags
+      eleccion2015   bag_of_hashtags
+    elecciones2015   bag_of_hashtags
+          48188884   user_retweet_related
+         843854348   user_retweet_related
+         393032512   user_retweet_related
+      balotaje2015   bag_of_hashtags
+          51890039   user_retweet_related
+   macripresidente   bag_of_hashtags
+         cambiemos   bag_of_hashtags
+         argentina   bag_of_hashtags
+        2818375135   user_retweet_related
+  centrodecomputos   bag_of_hashtags
+         175273213   user_retweet_related
+        3432310403   user_retweet_related
+          44401605   user_retweet_related
+      eleccion2015   bag_of_words
+   argentinadecide   bag_of_hashtags
+         568708490   user_retweet_related
+--------------------------------------------------------------------------------
+Cluster 3:
+          Username   Id                   Rt por
+         virchanga   357924704            0            48188884
+    leoquiroga1409   3380171585           0            48188884
+       gescobar991   3110235796           0            48188884
+     noemienbaires   2986372499           0            48188884
+    ChuchuGandur13   1872718351           0            48188884
+       laveuseport   2470242823           0            48188884
+         Evesalghi   186312949            0            48188884
+        Gallego_55   278980152            0            48188884
+    giagnoni_sonia   3381061017           0            48188884
+      papiboyparis   170419224            0            48188884
+         Laurasiia   208624875            0            48188884
+         CScartich   365279525            0            48188884
+   EstelaLagallega   4202416283           0            48188884
+   buscoladecencia   1425596600           0            48188884
+     RossiniStella   4197006927           0            48188884
+      valeiassogna   215625656            0            48188884
+       luceroxanco   176859771            0            48188884
+   juanamorales431   2909152577           0            48188884
+       MatiasPlett   153287706            0            48188884
+    anamartinez_ok   514532062            0            48188884
+    mati_schrankgh   3377665906           0            48188884
+     daianacornara   209654654            0            48188884
+       chinomartin   92014452             0            48188884
+   diegoemiliano16   484770875            0            48188884
+         maricluga   2979007024           0            2
+       HernanDobry   85851846             0            843854348
+    noviafugitiva4   1355463972           0            843854348
+             drf33   123557125            0            843854348
+          DFazzini   375771072            0            843854348
+       CarlaRuiz77   2830758700           0            843854348
+   marianavogler10   2705009825           0            843854348
+     danielvicente   185718815            0            843854348
+          manxlman   160793371            0            843854348
+    fabiocapdevila   157446157            0            3
+          NSackler   3421039468           0            2
+        Adrimar735   1040571601           0            2
+          orfunez1   4165546754           0            2
+        Vigoroth92   1584454957           0            2
+          CESAR371   53077709             0            2
+          Vigiaone   247067859            0            393032512
+       matiaskoren   161076262            0            393032512
+    nelidamoreira1   4166402367           0            393032512
+     anitamiraglia   1400004090           0            2
+   julianyosovitch   400054955            0            2
+   BrettsinclairLD   1247708090           0            2
+         eljugenio   2460407708           0            2
+             Cintu   27960698             0            2
+      marcelolaino   136482583            0            3
+        navarrovir   352032883            0            44401605
+   AlbaSoriaALtuna   74068721             0            44401605
+--------------------------------------------------------------------------------
+USUARIOS SIGNIFICATIVOS
+
+Usuario: GonzaloLozanoM    Nombre: Gonzalo Lozano Muñoz    Id: 48188884
+Seguidores: 2797         Seguidos: 2022
+Descripción: Estudiante de Ciencia Política. Músico.
+Retwitteado por: 215625656 357924704 488361075 514532062 1425596600 1040571601 2979007024 3380171585 599098160 199839212 136482583 1179449640 278980152 828998569 1157768755 157446157 254359530 153977017 448516666 209654654 2986372499 92014452 339941930 53077709 3110235796 170419224 1029646272 2470242823 1872718351 587829771 4202416283 27960698 186312949 484770875 153287706 176859771 149683135 4197006927 208624875 2909152577 50464375 338613692 1900832748 2460407708 3070537487 3377665906 3424452407 1584454957 4165546754 162911582 1461803786 365279525 3381061017 173283523 226000271 3421039468
+Retwitteo a:
+==================================== Tweets ====================================
+
+    RESULTADOS #ELECCION2015 MESA 3085 (YB-TUC)
+    MACRI: 214 (72,05%)
+    SCIOLI: 83 (27,95%)
+    #Decision2015 #Balotaje https://t.co/6tUxcZek8l
+
+
+
+
+Usuario: gorraperez      Nombre: oscar           Id: 843854348
+Seguidores: 262          Seguidos: 495
+Descripción: None
+Retwitteado por: 1942836565 6859342 160793371 276778901 85851846 3551170355 944967925 400054955 382359193 123557125 291650828 1247708090 2994560375 118124084 25793344 185718815 188586323 1400004090 1090294208 375771072 3103275237 2705009825 1355463972 2830758700
+Retwitteo a:
+==================================== Tweets ====================================
+
+    RESULTADOS #ELECCION2015 MESA 3085 (YB-TUC)
+    MACRI: 214 (72,05%)
+    SCIOLI: 83 (27,95%)
+    #Decision2015 #Balotaje https://t.co/l0McYx9jzU
+
+
+
+Usuario: gonhermida      Nombre: Gonzalo Hermida    Id: 393032512
+Seguidores: 127          Seguidos: 283
+Descripción: Cuenta Personal. Ingeniero en Producción Agropecuaria. Analista Agrícola en Bolsa de Cereales de Buenos Aires. #Girasol #Trigo
+Retwitteado por: 42324450 4166402367 1684510664 2339648411 2250180065 35904870 1135482001 161076262 2979007024 818915659 247067859 2970400480 147743435 851575969 338613692 225977150 458319452 471008757 864903324 632543655 1164570013 519506921
+Retwitteo a:
+==================================== Tweets ====================================
+
+    #Elecciones2015 #Decision2015 #Balotaje Ya terminamos en la Mesa 567 de la @bacomuna2 @FacuCarrillo @agusffox https://t.co/4vfJXR8NJa
+
+
+===================================================================================================================================================================
+
+CLUSTER 4
+MACRISTA (Muchos usan el hastag macripresidente)
+
+Cluster 4: 935 usuarios - 567 retwitteros
+    20 tokens más usados:    repeticiones usuarios que lo usaron
+           macripresidente   853          399
+                     macri   295          61
+             mauriciomacri   206          94
+                        no   174          43
+                 cambiemos   150          68
+                presidente   129          36
+                  yocambio   85           26
+                    cambio   77           39
+                   oficial   74           7
+                    pobres   62           2
+                     nuevo   58           15
+                        si   57           15
+                     desde   52           14
+                   campora   51           5
+                      gano   49           20
+                    scioli   49           22
+                     vamos   48           34
+              yovoteamacri   45           31
+                     llora   44           1
+              cfkargentina   42           8
+--------------------------------------------------------------------------------
+Cluster 4:
+   macripresidente   bag_of_hashtags
+    elecciones2015   bag_of_hashtags
+   macripresidente   bag_of_words
+         argentina   bag_of_hashtags
+         cambiemos   bag_of_hashtags
+             macri   bag_of_hashtags
+   argentinadecide   bag_of_hashtags
+     mauriciomacri   bag_of_words
+        1270407343   user_retweet_related
+          yocambio   bag_of_hashtags
+         cambiemos   bag_of_words
+             macri   bag_of_words
+      balotaje2015   bag_of_hashtags
+        1926431491   user_retweet_related
+                no   bag_of_words
+ cambiemosconmacri   bag_of_hashtags
+      yovoteamacri   bag_of_hashtags
+            cambio   bag_of_words
+        presidente   bag_of_words
+             vamos   bag_of_words
+--------------------------------------------------------------------------------
+Cluster 4:
+          Username   Id                   Rt por
+   NoSoyPerfectooo   1587179455           0            0
+           belunyc   31612889             0            0
+        AlfredSanz   199154673            0            0
+          guicopel   1186087927           0            0
+      chiaraBona1D   3391472475           0            0
+         caritommm   597455648            0            0
+       hannaylarry   4252731257           0            0
+   0d6be15ad07e49b   3010438996           0            0
+         PiaLispio   579282266            0            0
+        gryan_ares   824189473            0            0
+       LizAbecasis   3399687946           0            0
+    NikkitooPerezz   2536046957           0            0
+       caliva_hugo   623992147            0            0
+       lauboquita1   3700457416           0            1018465549
+         MColazo43   2811493563           0            2
+         luzmasa14   3969154083           0            1018465549
+   TomiTomichavezz   4181554463           0            1018465549
+     FrancheMoscce   3630987252           0            1018465549
+       sofiprada98   3644844675           0            1018465549
+        facugenero   363129325            0            1018465549
+         AliiHuens   754049569            0            1018465549
+       _SolAlfaro_   2337200720           0            1018465549
+      AguusBellini   913625078            0            1018465549
+       LTrudzinski   2938979355           0            1018465549
+         MatiiGH15   3494887641           0            1018465549
+           Ssosis9   1969929991           0            1018465549
+        MagalDelfi   4123593292           0            1018465549
+   lombardo_chucho   4245926818           0            1018465549
+     SaharaCaceres   4159320568           0            1018465549
+     aguusquuesada   2409639188           0            1018465549
+        DaiUrtubey   2771500031           0            1018465549
+      TaniaCortess   1556873875           0            1018465549
+    DelfiDelfiigar   4146007391           0            1018465549
+       FacuuTulian   1367965814           0            1018465549
+       ViviChicola   385528074            0            0
+   marieamelie_map   1646649374           0            172388441
+   BEATRIZBUFFETTI   811071494            0            172388441
+     martaenlareja   324577060            0            172388441
+      HaydeeCARP28   1281236714           0            172388441
+        HLarrabure   3551685136           0            2745196874
+       Trebolito22   2817283427           0            2745196874
+   Mentitasdementa   2231003321           0            2745196874
+   scorpio81751804   3864289371           0            2745196874
+        Marzioni_F   2475772970           0            0
+          AcadeAle   823936898            0            1611673310
+           JaviMcd   1227604591           0            2745196874
+    carolinapettit   2986356017           0            0
+       maullferraz   370312875            0            2745196874
+       EloDalinger   3941770162           0            2745196874
+      LuzFilgueira   2975241563           0            2745196874
+--------------------------------------------------------------------------------
+USUARIOS SIGNIFICATIVOS
+
+Usuario: isma_max        Nombre: Isma Oliva †    Id: 1018465549
+Seguidores: 10501        Seguidos: 9591
+Descripción: -████████100%DelPiberioBionico         -Llegas a un cierto punto de tu vida donde hay gente esperando para verte caer- #CiudadMagicaDeCordoba #TWD♥Lanata 32 TTs
+Retwitteado por: 3494887641 3644844675 4245926818 913625078 1556873875 1367965814 363129325 754049569 3700457416 3381184301 2553276656 3630987252 475593045 4123593292 3678059063 3969154083 4146007391 4159320568 4181554463 2409639188 414796616 1969929991 444139395 2811493563 2337200720 2849211140 2771500031 2354209308 3312163599 3569790503 519016414 2811493563 2938979355 235313651
+Retwitteo a:
+==================================== Tweets ====================================
+
+    Que paso con el bunker K? No eran ellos los que siempre festejaban antes de saber resultados? ESO ES MIEDO #Elecciones2015 #MacriPresidente
+
+    Que paso con el bunker K? No eran ellos los que siempre festejaban antes de saber resultados? ESO ES MIEDO #Elecciones2015 #MacriPresidente
+
+    Ni La Campora, ni el choripan, ni la campaña del miedo pueden contra el Cambio #Elecciones2015 #MacriPresidente
+
+    SE SIENTE! SE SIENTE! MAURICIO PRESIDENTE🎶🎶🎶 #Elecciones2015 #MacriPresidente
+
+
+Usuario: juanpedro1950    Nombre: juan pedro      Id: 172388441
+Seguidores: 42752        Seguidos: 45827
+Descripción: La buena memoria consiste en saber de qué es mejor olvidarse.
+Retwitteado por: 319841973 468657512 324577060 1281236714 210606257 1387974319 464126224 1513780226 160216568 353662527 128951070 1646649374 3462402197 3020331591 1614176047 790753255 576886839 143460063 393761151 84753853 54714649 1538658614 1247800896 2539877775 551551123 1069499863 1078032654 2253508593 469580468 2948520863 3787015414 2955932235 195355142 868443536 280054895 1496809758 342869115 565720362 2904477011 275204799 191727804 2956552857 3922251563 2998196811 242120786 2766035321 1581864990 2601938585 2434569902 1457672221 233754487 2203887181 1658810934 40498279 601469555 3298578688 861737077 811071494 230279704
+Retwitteo a:
+==================================== Tweets ====================================
+
+    Dani yo te avisé. Político que se baja no se cae de tan alto. (Carlos Menem)
+    #Elecciones2015
+
+    Yoli ha pagado muy cara su falta de huevos... Es un muerto político.
+    #Elecciones2015
+
+    Macri, q los delitos de corrupción  NO PRESCRIBAN  debe ser el primer proyecto de Ley enviado al Congreso.
+    #Elecciones2015 #MacriPresidente
+
+    Macri, q los delitos de corrupción  NO PRESCRIBAN  debe ser el primer proyecto de Ley enviado al Congreso.
+    #Elecciones2015 #MacriPresidente
+
+    Yoli ha pagado muy cara su falta de huevos... Es un muerto político.
+    #Elecciones2015
+
+
+Usuario: 2015PPT         Nombre: EL INSONMIO K®    Id: 2745196874
+Seguidores: 9523         Seguidos: 66
+Descripción: Politica con un toque de humor, a veces un poco acido, otras irónico, pero siempre un caballero..al que falta el respeto BLOQUEO #Cambiemos
+Retwitteado por: 2817283427 3941770162 2975241563 2933657645 3551685136 3864289371 2231003321 370312875 1227604591
+Retwitteo a:
+==================================== Tweets ====================================
+
+    MACRI 53%
+    SCIOLI 46%
+    #MacriPresidente #Elecciones2015 👍👍👍👍👍👍👍
+
+    MACRI 53%
+    SCIOLI 46%
+    #MacriPresidente #Elecciones2015 👍👍👍👍👍👍👍
+
+
+
+Usuario: Prestico_ddd    Nombre: Préstico        Id: 1926431491
+Seguidores: 121738       Seguidos: 117906
+Descripción: Humor de todo tipo, por publicidad:
+http://www.facebook.com/leandrolangerok
+Retwitteado por: 352813078 1582884606 405260531 1876741044 2891541239 3304193843 2905805806 3340131495 4099982284 2225545244 3306090911 2696020961 3035673461 1061110874 3243788955 602145424 3382294997 1453031504 226289836 3010242461 88275447 4146046865 1919162156 947709158 3696678863 1709656368 91226039 298615719 1016406140 3145686429 451204751 2728413349 2450525570 3888447254 3314016907 3818281713 2702100530 3560626101 3306090911 393071809 1199147066 1891920115 499242695 1956963031 139224338 2974993474 3866368323
+Retwitteo a:
+==================================== Tweets ====================================
+
+    #MacriPresidente #Macri https://t.co/0JGACbb5ZQ
+
+    #MacriPresidente #Macri https://t.co/0JGACbb5ZQ
+
+    #MacriPresidente #Macri https://t.co/0JGACbb5ZQ
+
+    #MacriPresidente #Macri https://t.co/0JGACbb5ZQ
+
+    #MacriPresidente #Macri https://t.co/0JGACbb5ZQ
+
+
+===================================================================================================================================================================
+
+CLUSTER 5
+SCIOLISTA (yovoteascioli)
+
+Cluster 5: 748 usuarios - 330 retwitteros
+    20 tokens más usados:    repeticiones usuarios que lo usaron
+             yovoteascioli   1053         440
+                        no   333          102
+                    quiero   129          34
+                      gana   89           11
+                     macri   81           37
+                        si   80           24
+                      voto   70           18
+              danielscioli   63           14
+                     vamos   62           27
+          sciolipresidente   52           32
+                      pais   51           33
+                     datos   45           10
+                companeros   45           7
+                      casa   42           6
+                   memoria   40           21
+                    cambio   39           12
+                      nada   38           13
+                 oficiales   38           10
+                    pueblo   38           10
+                   hashtag   38           3
+--------------------------------------------------------------------------------
+Cluster 5:
+     yovoteascioli   bag_of_hashtags
+     yovoteascioli   bag_of_words
+                no   bag_of_words
+    elecciones2015   bag_of_hashtags
+        3364212988   user_retweet_related
+  sciolipresidente   bag_of_hashtags
+             macri   bag_of_words
+         221972744   user_retweet_related
+            quiero   bag_of_words
+              pais   bag_of_words
+  sciolipresidente   bag_of_words
+         193941606   user_retweet_related
+             vamos   bag_of_words
+                si   bag_of_words
+        1851560454   user_retweet_related
+           memoria   bag_of_words
+            scioli   bag_of_words
+         154967870   user_retweet_related
+       mejorscioli   bag_of_hashtags
+            patria   bag_of_words
+Cluster 5:
+          Username   Id                   Rt por
+      daybernhardt   1898478901           0            0
+           Deedalo   532642647            0            0
+        BarbiMicol   887028504            0            0
+       dusso_anahi   876706524            0            0
+       reality_mar   3313910345           0            0
+        pablitoobj   4220382741           0            0
+   brendys_bionica   286878982            0            0
+   eveliin_eliiana   3066061587           0            0
+         mariterma   4187773738           0            0
+      marianoms372   159671423            0            0
+         CriisPeer   188635640            0            0
+    maxiperalta103   3340326911           0            0
+       santanaeros   2884491232           0            0
+    PelaaJuarez_OK   3400618787           0            0
+   27db6711098244f   3026340998           0            0
+       georgipaolo   577718940            0            0
+     alejgonzalez4   4173941003           0            0
+      juan_demonte   1578584004           0            0
+           Bremmnn   312657555            0            0
+        ViickyPons   320053386            0            0
+            brsrvs   499368654            0            0
+       silva25abel   3384623788           0            0
+       mirandoaale   311280019            0            0
+      janetbellido   1281114414           0            0
+          matuttes   185319151            0            0
+   larockerabritos   545627931            0            0
+          UnPatito   124499887            0            0
+       Diegokippes   329919867            0            0
+   carlito44615247   4183934794           0            0
+     patry_zalazar   138488348            0            0
+    EnfermaMenttal   257268080            0            0
+     OriianaAilinn   183871451            0            0
+        CinFiltros   3298436967           0            0
+     TanaEstefania   3060474736           0            0
+      Anita_Cusano   138191480            0            0
+       KaltenOrnek   1909268664           0            0
+        h4rryindie   2970590860           0            0
+      alepalacios0   4184043400           0            0
+         Dridrisss   2336736378           0            0
+        GuadaLareo   613188711            0            0
+    emilianodatola   108435446            0            0
+           vdvictk   4041905739           0            0
+         Gohan_Nqn   876942679            0            0
+         AdryInsua   3223130139           0            0
+        boss_lucho   3373174767           0            0
+        heymoon_16   2241466261           0            0
+    AgustinBattola   2373814484           0            0
+        pao_sonica   227386101            0            0
+        solalbert_   2848916511           0            0
+       erii22_cabj   964690951            0            0
+--------------------------------------------------------------------------------
+USUARIOS SIGNIFICATIVOS
+
+Usuario: batallakultural    Nombre: La Batalla Cultural    Id: 221972744
+Seguidores: 4697         Seguidos: 374
+Descripción: Cultura socialista y socialismo cultural. Marxismo-gramsciano-bronxiano con color moreno americano de la Patria Grande. No apto para gorilas y troscos.
+Retwitteado por: 127698535 138396452 1167719450 2572078993 195734704 136461691 2184708516 313610040 1302238051 3364212988 573807120 419810784 191186437 590161349 1569323977 1901977171 2463737641 1592005027 445731510 1976306378 3068987267 3324100265 2163486710 467520444 1656151818 2803285762 4229913939 1026641972 2810631157 4161196097 475530064 316007388 1010195784 601106183 165602631 90985318
+Retwitteo a:
+==================================== Tweets ====================================
+
+    #YoVoteAScioli y ahora espero el resultado, con ansiedad pero alegría. Con Néstor y Cristina en el corazón. https://t.co/Sq1rxpLAYO
+
+    #YoVoteAScioli y ahora espero el resultado, con ansiedad pero alegría. Con Néstor y Cristina en el corazón. https://t.co/Sq1rxpLAYO
+
+    #YoVoteAScioli y si gana Macri, ganan estos y gana esto. https://t.co/UVFOtQFfsv
+
+    #YoVoteAScioli y ahora espero el resultado, con ansiedad pero alegría. Con Néstor y Cristina en el corazón. https://t.co/Sq1rxpLAYO
+
+    #YoVoteAScioli y si gana Macri, ganan estos y gana esto. https://t.co/UVFOtQFfsv
+
+    #YoVoteAScioli y ahora espero el resultado, con ansiedad pero alegría. Con Néstor y Cristina en el corazón. https://t.co/Sq1rxpLAYO
+
+
+===================================================================================================================================================================
+
+CLUSTER 6
+PRINCIPAL USUARIO Nikgaturro, muchos lo retwittearon, y tiene muchos tweets. pero el esta en el CLUSTER 7...
+
+Cluster 6: 5163 usuarios - 3700 retwitteros
+    20 tokens más usados:    repeticiones usuarios que lo usaron
+                        no   763          256
+             mauriciomacri   454          147
+                     datos   402          91
+                 oficiales   397          98
+                  primeros   301          98
+              danielscioli   284          57
+                resultados   252          118
+                 cambiemos   217          113
+                    cambio   213          74
+                democracia   194          56
+                    scioli   179          81
+                 escrutado   165          11
+                 esperando   159          30
+                   campora   156          32
+                      gane   146          37
+                        si   145          64
+                presidente   143          60
+                     ahora   132          80
+                      alak   125          85
+                    bunker   123          45
+--------------------------------------------------------------------------------
+Cluster 6:
+    elecciones2015   bag_of_hashtags
+          51890039   user_retweet_related
+                no   bag_of_words
+         argentina   bag_of_hashtags
+      balotaje2015   bag_of_hashtags
+         cambiemos   bag_of_hashtags
+   argentinadecide   bag_of_hashtags
+          69416519   user_retweet_related
+     mauriciomacri   bag_of_words
+          balotaje   bag_of_hashtags
+        resultados   bag_of_words
+         cambiemos   bag_of_words
+         215272543   user_retweet_related
+eleccionesargentina   bag_of_hashtags
+          primeros   bag_of_words
+         oficiales   bag_of_words
+             macri   bag_of_hashtags
+             datos   bag_of_words
+          67805179   user_retweet_related
+              alak   bag_of_words
+--------------------------------------------------------------------------------
+Cluster 6:
+          Username   Id                   Rt por
+       sabrygarota   2681339758           0            0
+         Emifarfan   336789052            0            0
+        SantiFolco   440105270            0            0
+        NicoCarroz   1067250476           0            0
+        gertrudoma   2750840225           0            0
+         Laudelule   1240099068           0            0
+           eleupei   313714116            0            0
+      Brem03052014   1544283450           0            0
+    gustavpadilla1   3331580530           0            0
+       DivagaDiana   186933078            0            0
+      melissa17ccc   279166408            0            0
+   FlorenciaCaleca   229693388            0            0
+    LucasReboredo1   327439423            0            0
+     IgnacioDaniOK   3432205012           0            0
+    celestepereyra   113527271            0            0
+        RYDELF4NCY   2931116447           0            0
+        nobleleo46   3045466420           0            0
+       EABenitezDS   623206629            0            0
+         saltaalto   146060267            0            0
+        AbrilAlvez   453259732            0            0
+         GabaCordo   140847350            0            0
+       LeanColzani   342763063            0            0
+        gpascual96   288400166            0            0
+          3dmiguez   214179887            0            0
+          lusol_26   18292390             0            0
+   surfeandoelaire   58011405             0            0
+         abrahanzg   89342605             0            0
+     javiervaistij   2715228358           0            0
+      hachanegraok   3099924628           0            0
+     soycalunwordi   2189007020           0            0
+       AgueroEdhit   3395556125           0            0
+      SofiiiCuello   305303928            0            0
+       TefyMadrazo   3103165809           0            0
+   lellimarialuisa   3004108143           0            0
+          jonatanf   51677576             0            0
+       Nanoberries   75204080             0            0
+     JulianPlatino   1368589140           0            0
+         Mirko_012   354123600            0            2
+   FutbolParaTonto   444268346            0            51890039
+         26_hernan   517832415            0            51890039
+    celestemanflor   3078192861           0            51890039
+         v3ritoove   217889935            0            51890039
+          fedub_xx   147750559            0            51890039
+       yessi_gauto   305135200            0            51890039
+       jorgepujol2   1470824016           0            51890039
+         CaminLolo   2306550350           0            51890039
+        francmax12   276757958            0            51890039
+        ceciliazul   522452348            0            51890039
+   AmoreDeCorleone   122169447            0            51890039
+            flavec   138280826            0            51890039
+--------------------------------------------------------------------------------
+USUARIOS SIGNIFICATIVOS
+
+Usuario: Nikgaturro      Nombre: Nik             Id: 51890039
+Seguidores: 370849       Seguidos: 32997
+Descripción: Amar ♥ Disfrutar ♬ Estar bien ☼ Reír ☻ Vivir ★
+Retwitteado por: 2815722198 468562515 148832451 276784215 131568368 2233846885 1311630067 1857380269 118138887 859864814 162450182 2910187613 142859609 3462402197 3124614886 157110127 2553699446 208552826 1244876780 1422739927 214934611 413393902 232323812 186579431 2787088570 59256794 92398417 147416563 280596457 136443338 574234530 165488590 27420442 1663895221 361623861 2634306069 3399031132 4209449067 281269007 2577000529 133002462 153619111 4195752323 258574967 219509953 50464375 3321734585 152225865 199839212 202790806 443298060 169714464 2374631185 3647955019 99721881 108443711 4101769168 162427472 2840211249 3885689908 132945037 316072449 443331966 574803569 146141938 58740890 136811764 166977829 233778113 88654629 470636697 3297448924 3396211923 131350916 244980156 719595543 255565240 65637428 294918140 1424094750 4196113289 1362161275 825442831 188470857 486988524 208552826 2658451111 183839660 489694510 4190195794 1456013124 1281044682 3366172887 59256794 3351966449 1668274482 2840211249 151936759 154312730 468562515 326591826 1040571601 563102032 24834416 719459594 741019256 3087805367 270707061 168771953 393321160 475285876 276757958 42416899 106777199 282654875 3402981485 207680222 1430355200 842838648 161783334 391508180 2233846885 313062589 273470241 3351966449 195355142 127327437 2490100386 2147637127 2577000529 208573883 2328723032 308899809 4250935155 126161916 98461257 407986977 478981633 64414564 923876106 3021685097 571917936 2736958227 178435984 3396211923 4198232625 2885253317 128145131 378277935 75716462 2702903185 2932524255 3105072701 189349957 586566168 851941819 129516809 141329027 3181466679 3420194835 135674493 350475510 151243183 1353359208 278790287 233068855 2723543338 1511639474 154312730 430358950 166397274 604747997 480556053 80319220 3483393321 585269123 157648694 813923456 1255120502 4252603463 188432165 3360928048 65637428 8996072 361623861 4252458082 210606257 2802880033 1027508324 4196958867 104063354 93231274 4070140588 35793318 226729251 1938033726 244298176 4230170795 1104778142 3014715479 122169447 985091389 2973857737 136482583 2868224652 4252458082 3351966449 4194595426 1074536132 169139856 2840211249 3708869776 2615225687 219326388 126046921 220748847 4069634313 202790806 1511974537 48134586 361623861 167155187 278767297 268415908 37082750 1737935946 572658186 3024422278 3398969471 1627284733 55066891 3225713469 4252458082 307123424 386298156 298793709 192304577 166050670 230800802 314204652 517832415 43691197 901076647 3416683095 37084160 2949266331 264400134 2254867822 145865466 219875007 163615734 3056020594 136489420 205951982 3026444037 192676246 3602141601 269359247 278790287 3426344626 3777515188 989821843 220050170 811231310 136296830 3426344626 204787250 2577000529 2949266331 3351966449 707709537 845608728 2552376874 200549384 2846649104 4039910099 171455623 4175476169 565734021 422170095 3297986012 815269873 3708869776 3297448924 208878605 142859609 227281135 1551938263 3492525869 2970400480 2198195326 210387497 1377735774 409135450 708330423 134368750 575587494 1631652416 2181124454 2249028528 419956047 1461803786 4250062455 3398752874 4252603463 83452277 212647177 192782902 1293248066 2988312586 624405603 1611297302 272079375 4195046248 2815467211 2616148381 241310164 1135482001 147398112 3402981485 2577000529 323438768 274958392 3316077400 2542516201 2831964083 224835265 270707061 767604458 159653267 71163960 2455873968 885201732 2577000529 3411483531 203380488 109045608 1362161275 339172805 1366944080 606074681 4206764957 3240103456 3043123828 550058587 1109953981 4189216109 2293842868 3361231383 256122663 1164307902 3044283478 464126224 164478070 2231772000 405924380 1384576196 1152232687 166977829 556517192 137525987 1630364280 177537446 3097275767 139601768 71579458 65637428 168771953 135953341 2995951449 2962496452 124860806 772156622 1161219668 298066270 166544648 1385156964 297743431 2279715794 3397728514 105928637 3722070135 3045658464 569046172 233778113 172101117 3043123828 141329027 167532978 802890829 939822422 12401562 3360928048 427098419 968362964 1061110874 267557799 4097604135 128079324 146141938 142827637 326591826 2963095366 97244193 28416561 4078996984 254151173 154889181 3322211997 1511974537 1532989963 2202999830 161783334 2577000529 363427695 342869115 217475602 212647177 39545520 3092002027 3362017169 2994349611 2777232272 85217431 164435035 613495194 168771953 475285876 180855379 1852688832 522452348 2541731218 2306550350 362273184 936777570 3420194835 2946994888 153514838 133002462 291650828 3334629551 102133134 1862678048 613495194 1476380917 267557799 123477694 4182862877 67472828 131568368 1276403467 3602141601 2435362893 812042850 2202999830 202790806 243373381 3432853587 3369481330 1360919174 361623861 1716691855 254994378 80319220 1532989963 157446157 211353624 1589754854 2853538372 2536280273 136100205 4119888208 213159310 120584538 620220536 360885722 852905803 153514838 135953341 2959190439 917245417 1611841801 177077325 254994378 386298156 4194595426 4068453263 2334128626 4214011035 153514838 4145880725 1005451212 29835475 294893920 2793228293 189349957 628469813 2655117314 153514838 199010412 154649583 373494225 215058318 863278820 3820944113 255224256 2451843732 251978292 195355142 460495052 616219309 215058318 81265248 597603215 72849053 559842427 91604232 855830258 267786255 2950301410 2995951449 190846259 4144466387 4198817259 393761151 1099566330 4041755657 1639120885 4181728701 2861167266 66801246 1098364598 599236211 291788364 230532679 4214011035 294791023 301182897 894098874 267786255 3043123828 1627284733 1098364598 1403447233 1078322155 4039910099 147959993 175505450 2305325318 250459879 238235658 157585041 289473141 2274135491 318749683 189575420 3156147879 602278676 4214011035 247588225 396088207 2455873968 2773835788 1366944080 1129391966 945582722 1284469478 838787624 775074962 4198232625 2164918362 161783334 3043123828 216737889 140420098 1260570326 4085314475 297576487 435368613 31320302 181725669 519506921 995764556 881219034 1663748576 811370881 160805657 1165504621 3991086621 569456350 168771953 266936044 979739966 1526597192 356583760 52031947 178084321 2381031944 3435966783 3548336596 916882500 4214011035 258405848 4198817259 168771953 824406102 3974030873 132562083 510779485 1084888850 4214011035 1004604528 622882742 3991164082 382325767 398504224 561597304 153553475 318839710 2646017802 2658451111 587167312 3024376798 2467618172 2321231065 2608601741 304666871 150351936 248888115 3078192861 178107007 144183677 268982479 3512154016 69447964 178043152 189791181 1511974537 3947748496 3419032011 287010844 2418655349 175990221 290100600 2590095107 968784978 391155284 710885694 1581864990 334044654 419995314 121720285 45328530 71163960 3002430340 69301843 498684059 2938616157 452459496 1105392079 811586526 347353844 108634051 382808935 330747985 269359247 354123600 250459879 1135435208 2240944292 1263014671 162138567 196251314 745864381 3043123828 1614176047 826302583 61488899 254299056 564947341 71163960 280054895 252341166 1639120885 2407600569 132553757 324620028 3922251563 4024099701 2272373695 860297826 4218960785 514939640 3295917464 3290703214 160019253 2402655434 4039910099 573334389 2718084046 50464375 267557799 2946994888 305135200 150687063 1115376716 2985646497 208591876 215326452 4020807016 4049783842 4133533288 3334629551 3100677976 2409471968 144183677 4187818347 2451773815 3100677976 26744504 163731494 162916850 488037543 4189815317 63082458 2451843732 4197887458 1360605180 148832451 897874465 189296883 1511974537 2606389266 150353701 701912755 2530847852 2903191125 165488590 295444687 2272373695 132553757 2272373695 163049460 219806918 4107987291 2380574449 3065846427 68268984 157446157 4054287136 1099566330 3708869776 3079216726 556755262 3083635267 288993856 208708471 4183146021 164057554 1259683105 709986947 433395658 2272373695 145330579 1635615240 456258679 164290794 1430355200 2785914324 1158697982 419995314 2420972960 183036329 1158697982 3029119233 1147827488 1158697982 278239640 2272373695 4179902355 72304401 169089945 2960640437 3462402197 3247776052 4131244972 44789215 4246017977 4150001356 1363649646 217889935 132553757 2188745069 150630949 274712019 575328268 2824616221 573274534 216394190 107505086 812016314 128048614 75220911 415155942 1326764538 3338173745 135953341 181423542 2222100406 578217430 2789539768 81213857 118638764 41617910 2938616157 148442444 2151833480 2990179427 128070539 168556349 1362938082 1493528562 2916550421 2319745526 257751378 4182396263 1275734130 637459656 137856046 707524057 2648649535 177365523 3247776052 249337292 1854933998 2485911717 3053821249 225521355 319320428 155056632 3863751 21209578 152117373 375958980 269657043 192737963 1900832748 1470824016 298066270 4057307253 2401922704 2533678790 1286166739 4024099701 4190858699 4195688921 2690850423 162827920 309422669 134197509 210987269 72304401 89710864 335961187 326484771 465762682 1373245868 363427695 2865108496 2950450763 2451773815 473328967 532673894 2485911717 1616375923 47436557 1399942598 486848732 1097052210 2719429831 3298578688 1514238884 613495194 4195046248 305793757 368962641 3991086621 165488590 3837459255 1493591592 203380488 3316077400 447669017 354123600 210651621 373076533 35768927 162803407 457590955 2733796743 153544149 1323691117 162579914 1478827152 1581864990 3369481330 1038901266 2749054101 138130267 2970400480 260496816 3421039468 2985646497 2429438738 3298578688 3817033637 281738783 196356479 371242374 4115643088 230279704 2616148381 2357027252 147750559 123999229 3420194835 157764767 981938282 196719018 2507231404 575255579 342837377 26744504 107064815 4250062455 574234530 4094178923 160356606 271730738 366643185 334044654 1382639312 214934611 3297986012 1693818080 4232417825 366643185 184895055 196356479 133240816 192737963 154602995 3229649045 196356479 3722070135 757936334 140641140 1562031176 2513343890 494593541 719064091 210878414 350324078 382753684 570467284 2507231404 2954778009 1656277152 444268346 1480733143 233754487 3406636426 22913802 4076839941 168771953 4020452299 3913451183 735947510 1323691117 138134554 587829771 4047678255 3708869776 565008127 118206117 308192557 184895055 237337726 138280826 125340891 3053475602
+Retwitteo a:
+==================================== Tweets ====================================
+
+    Chiste de hace 5 meses. El comienzo del FIN. #Elecciones2015 https://t.co/PemjvCkjuw
+
+    Se quieren hacer la tarde? El programa humorístico del Siglo. Hoy hay que ver a los de C5N. #Elecciones2015
+
+    GRACIAS LILITA, mírala, festejando con el Pucho en la mano!!!!! #Elecciones2015 https://t.co/ASW6f9NCRW
+
+    Llegó la noticia al búnker de La Cámpora. "Muchachos, hay que empezar a laburar". #Elecciones2015 https://t.co/sNqvStrhCv
+
+    La primicia de C5N!!! Me quedó con la cara de Navarro!! Se acabó la pauta, campeón!! #Elecciones2015 https://t.co/YWCafKwifu
+
+    Primer comentario de Brancatelli. A ver... Que le decimos??? A coro, eeeeeh!!! #Elecciones2015 https://t.co/IEUSeEaVpK
+
+    GRACIAS LILITA, mírala, festejando con el Pucho en la mano!!!!! #Elecciones2015 https://t.co/ASW6f9NCRW
+
+    No se ustedes pero yo me voy a tocar bocina al obelisco con Pablo Echarri, Sbaraglia y Gerardo Romano!!! #Elecciones2015
+
+    Primer comentario de Brancatelli. A ver... Que le decimos??? A coro, eeeeeh!!! #Elecciones2015 https://t.co/IEUSeEaVpK
+
+
+===================================================================================================================================================================
+
+CLUSTER 7
+INCLINACION MACRISTA, con algunos twitteros que informan sobre los resultados parciales.
+No hay un usuario que marque tendencia.
+
+Cluster 7: 1078 usuarios - 41 retwitteros
+    20 tokens más usados:    repeticiones usuarios que lo usaron
+                     macri   3008         1070
+                    scioli   1162         422
+                resultados   638          141
+                  primeros   631          170
+                  mauricio   615          185
+                 oficiales   577          159
+                        no   542          124
+                      gana   525          154
+                presidente   445          111
+                     datos   388          146
+                     mesas   367          120
+                      gano   365          89
+                escrutadas   320          102
+               brancatelli   303          4
+             mauriciomacri   302          91
+                 cambiemos   276          64
+                    lilita   256          7
+                   gerardo   253          1
+                    romano   253          1
+                     ahora   252          60
+--------------------------------------------------------------------------------
+Cluster 7:
+             macri   bag_of_words
+    elecciones2015   bag_of_hashtags
+            scioli   bag_of_words
+             macri   bag_of_hashtags
+          mauricio   bag_of_words
+          primeros   bag_of_words
+         oficiales   bag_of_words
+              gana   bag_of_words
+         argentina   bag_of_hashtags
+             datos   bag_of_words
+        resultados   bag_of_words
+   argentinadecide   bag_of_hashtags
+                no   bag_of_words
+             mesas   bag_of_words
+        presidente   bag_of_words
+            scioli   bag_of_hashtags
+        escrutadas   bag_of_words
+     mauriciomacri   bag_of_words
+              gano   bag_of_words
+              urna   bag_of_words
+--------------------------------------------------------------------------------
+Cluster 7:
+          Username   Id                   Rt por
+    DearmasRodrigo   353708651            0            0
+       Flor__Gleek   1626938748           0            0
+         WithFeels   4161683727           0            0
+      cristianre78   364846815            0            0
+          DDelerse   4210498287           0            0
+          Aguss189   2801154399           0            0
+          KattVilc   3485629335           0            0
+   carolinacarmona   48866336             0            0
+    AlexisLMorales   199714581            0            0
+         matt_vago   193828749            0            0
+          thomaspx   227480928            0            0
+       LaaLoquitha   3950569397           0            0
+          YarexiAC   113523320            0            0
+      cecii_ivonne   3384859425           0            0
+   _LuciaFlorencia   881279989            0            0
+        Elii_Pozzi   3637906336           0            0
+         erikatamb   592906405            0            0
+       OriUllate12   3154057578           0            0
+       Romy_Lalita   2820584880           0            0
+    fraanmartinez_   3331916145           0            0
+         ChaloCabj   1331127408           0            0
+        FacuSosa05   2399560371           0            0
+      daiana_rochi   1096868287           0            0
+         AlePietra   75418621             0            0
+           LenchoM   74792795             0            0
+        LaCafecita   2846734162           0            0
+         johnmclou   93963654             0            0
+           Tomaspk   101131586            0            0
+      ILLinkinPark   1002553369           0            0
+   virginiapalac20   2542628077           0            0
+        Bernardo_E   64715856             0            0
+         VIOLE1954   72167659             0            0
+        cuchacucha   67977000             113215138    0
+      LudmilaSerd2   167993735            0            0
+     matierrecalde   142733113            0            0
+      agenciatitan   2367483696           0            0
+           Mcfur04   87344477             0            0
+          DaniPa25   253371230            0            0
+           milusil   224014305            0            0
+          ivancio4   297540374            0            0
+      Fonseca_Clau   253717942            0            0
+       Facu_Merino   1496588840           0            0
+       alvaroluism   195593780            0            0
+     AlfredoJoseTv   1651218816           0            0
+         terefunes   176530382            0            0
+        Albertojvz   284308468            0            0
+        CayoMelisa   2604992171           0            0
+      Mariano_Rulo   1470352122           0            0
+      MjChelyOrtiz   165540763            0            0
+         PQSalazar   265461924            0            0
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+================================================================================
+Clasificación por preferencias (hashtags):
+       Preferencia   Número de Usuarios
+         Macristas   2235
+        Sciolistas   985
+    Macri y Scioli   331
+             Otros   11365
+================================================================================
