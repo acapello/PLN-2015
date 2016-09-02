@@ -64,17 +64,17 @@ Model type: <class 'parsing.baselines.Flat'>
 
 * Parsed 1444 sentences
 * Labeled
-  * Precision: 99.93%
-  * Recall: 14.57%
-  * F1: 25.43%
+  - Precision: 99.93%
+  - Recall: 14.57%
+  - F1: 25.43%
 * Unlabeled
-  * Precision: 100.00%
-  * Recall: 14.58%
-  * F1: 25.45%
+  - Precision: 100.00%
+  - Recall: 14.58%
+  - F1: 25.45%
 
-real 8.85
-user 7.65
-sys 0.21
+real 7.87
+user 7.78
+sys 0.09
 (tiempo en segundos)
 
 - RBranch:
@@ -83,17 +83,17 @@ Model type: <class 'parsing.baselines.RBranch'>
 
 * Parsed 1444 sentences
 * Labeled
-  * Precision: 8.81%
-  * Recall: 14.57%
-  * F1: 10.98%
+  - Precision: 8.81%
+  - Recall: 14.57%
+  - F1: 10.98%
 * Unlabeled
-  * Precision: 8.87%
-  * Recall: 14.68%
-  * F1: 11.06%
+  - Precision: 8.87%
+  - Recall: 14.68%
+  - F1: 11.06%
 
-real 13.75
-user 13.63
-sys 0.12
+real 8.56
+user 8.46
+sys 0.09
 
 - LBranch:
 
@@ -101,17 +101,17 @@ Model type: <class 'parsing.baselines.LBranch'>
 
 * Parsed 1444 sentences
 * Labeled
-  * Precision: 8.81%
-  * Recall: 14.57%
-  * F1: 10.98%
+  - Precision: 8.81%
+  - Recall: 14.57%
+  - F1: 10.98%
 * Unlabeled
-  * Precision: 14.71%
-  * Recall: 24.33%
-  * F1: 18.33%
+  - Precision: 14.71%
+  - Recall: 24.33%
+  - F1: 18.33%
 
-real 18.59
-user 18.39
-sys 0.18
+real 8.71
+user 8.63
+sys 0.07
 
 
 EJERCICIO 2: Algoritmo CKY
@@ -137,17 +137,17 @@ Model type: <class 'parsing.upcfg.UPCFG'>
 
 * Parsed 1444 sentences
 * Labeled
-  * Precision: 73.05%
-  * Recall: 72.75%
-  * F1: 72.90%
+  - Precision: 73.22%
+  - Recall: 72.92%
+  - F1: 73.07%
 * Unlabeled
-  * Precision: 75.16%
-  * Recall: 74.85%
-  * F1: 75.00%
+  - Precision: 75.33%
+  - Recall: 75.02%
+  - F1: 75.18%
 
-real 326.37
-user 322.82
-sys 3.51
+real 311.28
+user 310.24
+sys 0.95
 
 
 EJERCICIO 4: Markovización Horizontal
@@ -163,17 +163,17 @@ Model type: <class 'parsing.upcfg.UPCFG'>
 
 * Parsed 1444 sentences
 * Labeled
-  * Precision: 70.18%
-  * Recall: 69.95%
-  * F1: 70.06%
+  - Precision: 70.25%
+  - Recall: 70.02%
+  - F1: 70.14%
 * Unlabeled
-  * Precision: 72.04%
-  * Recall: 71.81%
-  * F1: 71.93%
+  - Precision: 72.11%
+  - Recall: 71.88%
+  - F1: 72.00%
 
-real 197.78
-user 197.69
-sys 0.11
+real 104.10
+user 104.00
+sys 0.08
 
 
 n = 1
@@ -181,17 +181,17 @@ Model type: <class 'parsing.upcfg.UPCFG'>
 
 * Parsed 1444 sentences
 * Labeled
-  * Precision: 74.71%
-  * Recall: 74.62%
-  * F1: 74.66%
+  - Precision: 74.66%
+  - Recall: 74.57%
+  - F1: 74.61%
 * Unlabeled
-  * Precision: 76.58%
-  * Recall: 76.48%
-  * F1: 76.53%
+  - Precision: 76.53%
+  - Recall: 76.43%
+  - F1: 76.48%
 
-real 186.05
-user 185.85
-sys 0.21
+real 130.44
+user 130.27
+sys 0.13
 
 
 n = 2
@@ -199,17 +199,17 @@ Model type: <class 'parsing.upcfg.UPCFG'>
 
 * Parsed 1444 sentences
 * Labeled
-  * Precision: 74.81%
-  * Recall: 74.29%
-  * F1: 74.55%
+  - Precision: 74.80%
+  - Recall: 74.28%
+  - F1: 74.54%
 * Unlabeled
-  * Precision: 76.73%
-  * Recall: 76.20%
-  * F1: 76.46%
+  - Precision: 76.72%
+  - Recall: 76.19%
+  - F1: 76.45%
 
-real 219.71
-user 219.42
-sys 0.38
+real 223.45
+user 223.11
+sys 0.32
 
 
 n = 3
@@ -217,14 +217,14 @@ Model type: <class 'parsing.upcfg.UPCFG'>
 
 * Parsed 1444 sentences
 * Labeled
-  * Precision: 73.92%
-  * Recall: 73.28%
-  * F1: 73.60%
+  - Precision: 74.03%
+  - Recall: 73.39%
+  - F1: 73.71%
 * Unlabeled
-  * Precision: 76.08%
-  * Recall: 75.42%
-  * F1: 75.75%
+  - Precision: 76.19%
+  - Recall: 75.54%
+  - F1: 75.86%
 
-real 277.70
-user 277.08
-sys 0.72
+real 280.07
+user 279.52
+sys 0.52

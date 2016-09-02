@@ -25,7 +25,7 @@ class UPCFG:
             unlex_t.set_label(start)
             unlex_t.chomsky_normal_form(horzMarkov=horzMarkov)
             # Not collapsing the Root (collapseRoot=False)
-            unlex_t.collapse_unary(collapsePOS=True)
+            unlex_t.collapse_unary(collapsePOS=True, collapseRoot=True)
             productions += unlex_t.productions()
 
         self.pcfg = induce_pcfg(self.start, productions)
