@@ -49,9 +49,24 @@ PLN-2015$ python clustering/scripts/print_relevant_users.py -i model -c 5 -n 10
 
 
 
+
+
 MODULOS REQUERIDOS:
 featureforge
 sklearn
 pickle
 wordcloud
 matplotlib
+
+Hints para instalación:
+sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
+sudo apt-get install libblas-dev liblapack-dev libatlas-base-dev gfortran
+
+Despues de crear el virtualenv con python 3 (en el readme del proyecto):
+
+pip install --upgrade virtualenv
+pip install --upgrade pip  (esto pasa pip a pip3 usando el comando pip)
+pip install --upgrade ipython (instalar el ipython3 dentro del virtualenv, quedando como compando ipython)
+pip install --upgrade nose (instalar los nosetests-3.4, quedando como comando nosetests (simple))
+sudo pip install --upgrade scipy
+sudo pip install --upgrade scikit-learn
